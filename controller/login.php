@@ -36,6 +36,8 @@ if ($_POST) {
                 $sql = "INSERT INTO `usuario` (`id`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `telefono`, `correo`, `direccion`, `internet`, `acesso_dispositivo`, `fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES (NULL, '$p_nombre', '$s_nombre', '$apellido_m', '$apellido_p', '$telefono', '$correo', '$direccion', '$internet', '$acesso_dispositivo', '$fktipo_doc', '$fktipo_usu', '$fketnia', '$fksexo', '$fknvledu', '$fkbarrio', '$fkmunicipio')";
                 // llamamos al método ejecutar de conexion
                 $objConexion->ejecutar($sql);
+                break;
+            
         }
 
     }
