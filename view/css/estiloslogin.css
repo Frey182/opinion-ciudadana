@@ -1,0 +1,12 @@
+body{
+    background-color: #EEF2E6;
+}
+.card{
+    text-align: center;
+}
+input{
+    text-align: center;
+}
+.btn:hover{
+    color:white;
+}

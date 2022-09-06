@@ -16,8 +16,36 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Popper JS -->
+    <link rel="stylesheet" href="css/estiloslogin.css">
 </head>
 <body>
-    
+<div class="container-fluid" style="height: 100vh">
+    <div class="row h-100">
+        <div class="col col-md-3"></div>
+           <div class="conteform col col-md-6">
+           <br><br><br><br><br><br><br>
+                <div class="card shadow rounded">
+                    <div class="card-header bg-warning" ><h1 style="color:white;">Inicio de sesion</h1></div>
+                    <div class="card-body">
+                        <form action="login.php.php">
+                            <div class="form-group">
+                                <label for="nif">No. Identificacion</label>
+                                <input type="number" class="form-control" placeholder="Ingresa tu numero de identificacion..." id="nif">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Contraseña</label>
+                                <input type="password" class="form-control" placeholder="Ingresa tu contraseña..." id="pwd">
+                            </div>
+                            <button type="submit" class="btn btn-outline-warning font-weight-bold">Iniciar sesion</button>
+                        </form>
+                    </div>
+                </div>
+               
+           </div>
+        <div class="col col-md-3"></div>
+    </div>
+</div>
 </body>
 </html>
