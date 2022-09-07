@@ -38,6 +38,7 @@
                                 <label for="pwd">Contraseña</label>
                                 <input type="password" class="form-control" placeholder="Ingresa tu contraseña..." id="pwd">
                             </div>
+                            <a href="">¿Aun no tienes cuenta?</a>
                             <button type="submit" class="btn btn-outline-warning font-weight-bold">Iniciar sesion</button>
                         </form>
                     </div>
