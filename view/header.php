@@ -18,7 +18,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- CSS-->
-   
+    <link rel="stylesheet" href="view/css/estilos.css">
 </head>
 <body style="background-color: #EEF2E6">
     <nav class="navbar navbar-expand-lg navbar-light bg-warning">

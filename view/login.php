@@ -1,3 +1,5 @@
+<?php include "../model/conexion.php" ?>
+<?php include "../controller/login.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,19 +31,19 @@
                 <div class="card shadow rounded">
                     <div class="card-header bg-warning" ><h1 style="color:white;">Inicio de sesion</h1></div>
                     <div class="card-body">
-                        <form action="login.php.php">
+                        <form action="login.php" method="post">
                             <div class="form-group">
                                 <label for="nif">No. Identificacion</label>
-                                <input type="number" class="form-control" placeholder="Ingresa tu numero de identificacion..." id="nif">
+                                <input type="number" class="form-control" placeholder="Ingresa tu numero de identificacion..." id="nif" name="dni">
                             </div>
                             <div class="form-group">
                                 <label for="pwd">Contraseña</label>
-                                <input type="password" class="form-control" placeholder="Ingresa tu contraseña..." id="pwd">
+                                <input type="password" class="form-control" placeholder="Ingresa tu contraseña..." id="pwd" name="contrasenia">
                             </div>
                                 <div class="contebuton">
-                                    <button id="btnSlider3" type="button" class="btn btn-outline-warning font-weight-bold mt-4">REGISTRARSE</button>
+                                    <button id="btnSlider3" type="submit" class="btn btn-outline-warning font-weight-bold mt-4" name="enviar" value="ingresar">Iniciar sesión</button>
                                 </div>
-                                    <a href="">¿Aun no tienes cuenta?</a>
+                                    <a href="register.php">¿Aun no tienes cuenta?</a>
                         </form>
                     </div>
                 </div>
