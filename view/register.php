@@ -31,7 +31,7 @@
                     <div class="card-body">     
                             <form action="register.php">
                                <!-- Slider 1 del registro -->
-                               <div class="slider1">
+                               <div class="slider1" id="slider1">
                                     <div class="row">
                                         <div class="col col-md-8">
                                             <h4>IDENTIFICACION</h4>
@@ -78,10 +78,10 @@
                                         </div>
                                             <div class="col col-md-4">
                                                 <div class="contelogo mt-5 ">
-                                                    <img src="img/logogobierno.png" style="width:200px; height:200px;" alt="">
+                                                    <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="contebuton">
-                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button>
+                                                    <button id="btnSlider1" type="button" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button>
                                                 </div>
                                                     <a href="">¿Ya tienes cuenta?</a>
                                             </div>  
@@ -91,7 +91,7 @@
 
 
                                 <!-- Slider 2 del registro -->
-                                <div class="slider2">
+                                <div class="slider2 d-none" id="slider2">
                                     <div class="row">
                                         <div class="col col-md-8">
                                             <h4>GEOGRAFICAS</h4>
@@ -148,10 +148,10 @@
                                          </div>
                                             <div class="col col-md-4">
                                                 <div class="contelogo mt-5 ">
-                                                    <img src="img/logogobierno.png" style="width:200px; height:200px;" alt="">
+                                                    <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="contebuton">
-                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button>
+                                                    <button id="btnSlider2" type="button" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button>
                                                 </div>
                                                     <a href="">¿Ya tienes cuenta?</a>
                                             </div>  
@@ -164,7 +164,7 @@
 
 
                                 <!-- Slider 3 del formulario -->
-                                <div class="slider3">
+                                <div class="slider3 d-none" id="slider3">
                                     <div class="row">
                                         <div class="col col-md-8">
                                             <h4>ESCOLARIDAD</h4>
@@ -262,10 +262,10 @@
                                                     </div>
                                                 </div>
                                                 <div class="contelogo mt-3 ">
-                                                    <img src="img/logogobierno.png" style="width:200px; height:200px;" alt="">
+                                                    <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="contebuton">
-                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4">REGISTRARSE</button>
+                                                    <button id="btnSlider3" type="button" class="btn btn-outline-warning font-weight-bold mt-4">REGISTRARSE</button>
                                                 </div>
                                                     <a href="">¿Ya tienes cuenta?</a>
                                             </div>  
@@ -281,5 +281,6 @@
         <div class="col col-md-2"></div>
     </div>
 </div>
+<script src="js/main.js"></script>
 </body>
 </html>
