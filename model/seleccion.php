@@ -8,6 +8,9 @@ $etnias = $objConexion->consultar($etnias);
 $municipios = "SELECT * FROM `municipio`";
 $municipios = $objConexion->consultar($municipios);
 
+$barrios = "SELECT * FROM `barrio`";
+$barrios = $objConexion->consultar($barrios);
+
 $sexos = "SELECT * FROM `sexo`";
 $sexos = $objConexion->consultar($sexos);
 
