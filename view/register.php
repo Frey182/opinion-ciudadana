@@ -79,6 +79,7 @@
                                                 <div class="contelogo mt-5 ">
                                                     <img src="img/logogobierno.png" style="width:200px; height:200px;" alt="">
                                                 </div>
+                                                <a href="">¿Ya tienes cuenta?</a>
                                                 <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4">Iniciar sesion</button>
                                             </div>  
                                     </div>
