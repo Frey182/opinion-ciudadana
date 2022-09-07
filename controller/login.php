@@ -25,13 +25,12 @@ if ($_POST) {
                 $correo = $_POST['correo'];
                 $direccion = $_POST['direccion'];
                 $internet = $_POST['internet'];
-                $acesso_dispositivo = $_POST['acesso_dispositivo'];
+                $acceso_dispositivo = $_POST['acceso_dispositivo'];
                 $dispositivo = $_POST['dispositivo'];
                 $discapacidad = $_POST['discapacidad'];
                 $estrato = $_POST['estrato'];
                 $regimen = $_POST['regimen'];
                 $fktipo_doc = $_POST['fktipo_doc'];
-                $fktipo_usu = $_POST['fktipo_usu'];
                 $fketnia = $_POST['fketnia'];
                 $fksexo = $_POST['fksexo'];
                 $fknvledu = $_POST['fknvledu'];
@@ -39,7 +38,7 @@ if ($_POST) {
                 $fkmunicipio = $_POST['fkmunicipio'];
 
                 // hacemos la insercción en la tabla
-                $sql = "INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `telefono`, `correo`, `direccion`, `internet`, `acesso_dispositivo`, `dispositivo`, `fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES ('$dni', '$p_nombre ', '$s_nombre', '$apellido_m', '$apellido_p', '$nacimiento', '$telefono', '$correo', '$direccion', '$internet ', '$acesso_dispositivo', '$dispositivo', '$discapacidad', '$estrato', '$regimen', '$fktipo_doc', 'usuario', '$fketnia', '$fksexo', '$fknvledu', '$fkbarrio', '$fkmunicipio')";
+                $sql = "INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `telefono`, `correo`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `fkdiscapacidad`, `estrato`, `regimen`,`fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES ('$dni', '$p_nombre ', '$s_nombre', '$apellido_m', '$apellido_p', '$nacimiento', '$telefono', '$correo', '$direccion', '$internet ', '$acceso_dispositivo', '$dispositivo', '$discapacidad', '$estrato', '$regimen', '$fktipo_doc', '1', '$fketnia', '$fksexo', '$fknvledu', '$fkbarrio', '$fkmunicipio')";
                 // llamamos al método ejecutar de conexion
                 $objConexion->ejecutar($sql);
                 break;
