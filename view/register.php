@@ -33,7 +33,7 @@
     <div class="row h-100">
         <div class="col col-md-2"></div>
            <div class="conteform col col-md-8">
-           <br>
+           <br><br>
                 <div class="card shadow rounded">
                     <div class="card-header bg-warning" ><h1 style="color:white;">REGISTRO</h1></div>
                     <div class="card-body">     
@@ -42,7 +42,7 @@
                                <div class="slider1" id="slider1">
                                     <div class="row">
                                         <div class="col col-md-8">
-                                            <h4>IDENTIFICACION</h4>
+                                            
                                             <div class="form-group d-flex">
                                                 <select class="form-control w-25 mr-3" id="exampleFormControlSelect1" name="fktipo_doc">
                                                     <option disable>Tipo doc</option>
@@ -75,7 +75,7 @@
                                                     <option>Otro</option>
                                                 </select>
                                             </div>
-                                            <h4>CONTACTO</h4>
+                                            
                                             <div class="form-group d-flex">
                                                 <input type="number" class="form-control w-25 mr-3" placeholder="Telefono celular" id="telefono" name="telefono">
                                                 <input type="email" class="form-control w-75" placeholder="Correo" id="correo" name="correo">
@@ -86,15 +86,13 @@
                                             </div>
                                         </div>
                                             <div class="col col-md-4">
-                                                <div class="contelogo mt-5 ">
+                                                <div class="contelogo mt-1 ">
                                                     <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
-                                                <div class="contebuton">
-                                                   <!--  <button id="btnSlider1" type="button" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button>
-                                                    <button id="btnSlider1" type="button" class="btn btn-outline-warning font-weight-bold mt-4">Atras</button> -->
-                                                </div>
+                                                <div class="contebuton mt-3 ">
                                                     <a href="">¿Ya tienes cuenta?</a>
-                                            </div>  
+                                                </div>
+                                            </div>
                                     </div>
                                 </div>
 
@@ -104,18 +102,41 @@
                                 <div class="slider2 d-none" id="slider2">
                                     <div class="row">
                                         <div class="col col-md-8">
-                                            <h4>GEOGRAFICAS</h4>
+                                            
                                             <div class="form-group d-flex">
-                                                <input type="text" class="form-control w-50 mr-3" placeholder="Municipio" id="municipio" name="fkmunicipio">
-                                                <input type="text" class="form-control w-50" placeholder="Barrio/Vereda" id="barrio" name="fkbarrio">
+                                                <select class="form-control w-50 mr-3" id="exampleFormControlSelect1" id="municipio" name="fkmunicipio">
+                                                    <option disable>Municipio</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                </select>
+                                                <select class="form-control w-50" id="exampleFormControlSelect1" id="barrio" name="fkbarrio">
+                                                    <option disable>Barrio/Vereda</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                </select>
                                             </div> 
                                             <div class="form-group">
                                                 <input type="text" class="form-control w-100" placeholder="Direccion" id="direccion" name="direccion">
                                             </div> 
-                                            <h4>ENFOQUE DIFERENCIAL</h4>
+                                            
                                             <div class="form-group d-flex">
-                                                <input type="date" class="form-control w-75" placeholder="Fecha de nacimiento" id="f_nacimiento" name="nacimiento">
-                                                <select class="form-control w-25 mr-3" id="exampleFormControlSelect1" name="fketnia">
+                                                <div class="input-group mr-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Fecha de nacimiento</span>
+                                                    </div>
+                                                        <input type="date" aria-label="fecha" class="form-control" id="f_nacimiento" name="nacimiento">
+                                                </div>
+                                                <select class="form-control w-25" id="exampleFormControlSelect1" name="fketnia">
                                                     <option disable>Etnia</option>
                                                     <option>...</option>
                                                     <option>...</option>
@@ -126,7 +147,6 @@
                                                     <option>...</option>
                                                 </select>
                                             </div>
-                                            <h4>ENFOQUE POBLACIONAL</h4>
                                             <div class="form-group">
                                                 <select class="form-control w-100" id="exampleFormControlSelect1" name="discapacidad">
                                                     <option disable>Condicion de discapacidad</option>
@@ -139,7 +159,6 @@
                                                     <option>...</option>
                                                 </select>
                                             </div>
-                                            <h4>SOCIOECONOMICO</h4>
                                             <div class="form-group">
                                                 <select class="form-control w-100" id="exampleFormControlSelect1" name="estrato">
                                                     <option disable>Estrato de residencia</option>
@@ -159,13 +178,15 @@
                                             </div>
                                          </div>
                                             <div class="col col-md-4">
-                                                <div class="contelogo mt-5 ">
+                                                <div class="contelogo mt-2 ">
                                                     <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
-                                                <div class="contebuton mt-3">
+                                                <div class="contebuton">
                                                     <!-- <button id="btnSlider2" type="button" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button> -->
                                                 </div>
+                                                <div class="contebuton mt-3 ">
                                                     <a href="">¿Ya tienes cuenta?</a>
+                                                </div>
                                             </div>  
                                     </div>
                                 </div>
@@ -179,9 +200,9 @@
                                 <div class="slider3 d-none" id="slider3">
                                     <div class="row">
                                         <div class="col col-md-8">
-                                            <h4>ESCOLARIDAD</h4>
+                                           
                                             <div class="form-group d-flex">
-                                                <select class="form-control w-100 mr-3" id="exampleFormControlSelect1" name="fknvledu">
+                                                <select class="form-control w-100" id="exampleFormControlSelect1" name="fknvledu">
                                                     <option disable>Ultimo nivel educativo alcanzado</option>
                                                     <option>...</option>
                                                     <option>...</option>
@@ -256,7 +277,6 @@
                                             </div>
                                         </div>
                                             <div class="col col-md-4">
-                                                <h4>SALUD</h4>
                                                 <div class="contepreguntaform border mb-1 p-3">
                                                     <h6>Tipo de regimen de afiliacion</h6>
                                                     <div class="conteradio d-flex justify-content-center ">
@@ -278,7 +298,7 @@
                                                     <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="contebuton">
-                                                   <!--  <button id="btnSlider3" type="button" class="btn btn-outline-warning font-weight-bold mt-4">REGISTRARSE</button> -->
+                                                    <button type="button" class="btn btn-outline-warning font-weight-bold mt-4" name="enviar" value="registrarse">REGISTRARSE</button>
                                                 </div>
                                                     <a href="">¿Ya tienes cuenta?</a>
                                             </div>  
