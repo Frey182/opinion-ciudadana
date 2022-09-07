@@ -25,12 +25,13 @@
     <div class="row h-100">
         <div class="col col-md-2"></div>
            <div class="conteform col col-md-8">
-           <br><br><br>
+           <br>
                 <div class="card shadow rounded">
                     <div class="card-header bg-warning" ><h1 style="color:white;">REGISTRO</h1></div>
                     <div class="card-body">     
                             <form action="register.php">
-                                <div class="slider1">
+                               <!-- Slider 1 del registro -->
+                               <div class="slider1">
                                     <div class="row">
                                         <div class="col col-md-8">
                                             <h4>IDENTIFICACION</h4>
@@ -74,13 +75,199 @@
                                             <div class="paginacion" style="text-aling:center; font-weight:bold;">
                                                 <p>1 de 3</p>
                                             </div>
+                                        </div>
+                                            <div class="col col-md-4">
+                                                <div class="contelogo mt-5 ">
+                                                    <img src="img/logogobierno.png" style="width:200px; height:200px;" alt="">
+                                                </div>
+                                                <div class="contebuton">
+                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button>
+                                                </div>
+                                                    <a href="">¿Ya tienes cuenta?</a>
+                                            </div>  
+                                    </div>
+                                </div>
+
+
+
+                                <!-- Slider 2 del registro -->
+                                <div class="slider2">
+                                    <div class="row">
+                                        <div class="col col-md-8">
+                                            <h4>GEOGRAFICAS</h4>
+                                            <div class="form-group d-flex">
+                                                <input type="text" class="form-control w-50 mr-3" placeholder="Municipio" id="municipio" name="municipio">
+                                                <input type="text" class="form-control w-50" placeholder="Barrio/Vereda" id="barrio" name="barrio">
+                                            </div> 
+                                            <div class="form-group">
+                                                <input type="text" class="form-control w-100" placeholder="Direccion" id="direccion" name="direccion">
+                                            </div> 
+                                            <h4>ENFOQUE DIFERENCIAL</h4>
+                                            <div class="form-group d-flex">
+                                                <input type="date" class="form-control w-75" placeholder="Fecha de nacimiento" id="f_nacimiento" name="f_nacimiento">
+                                                <select class="form-control w-25 mr-3" id="exampleFormControlSelect1" name="tipo_doc">
+                                                    <option disable>Etnia</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                            <h4>ENFOQUE POBLACIONAL</h4>
+                                            <div class="form-group">
+                                                <select class="form-control w-100" id="exampleFormControlSelect1" name="tipo_doc">
+                                                    <option disable>Condicion de discapacidad</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                            <h4>SOCIOECONOMICO</h4>
+                                            <div class="form-group">
+                                                <select class="form-control w-100" id="exampleFormControlSelect1" name="tipo_doc">
+                                                    <option disable>Condicion de discapacidad</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                            <div class="paginacion" style="text-aling:center; font-weight:bold;">
+                                                <p>2 de 3</p>
+                                            </div>
                                          </div>
                                             <div class="col col-md-4">
                                                 <div class="contelogo mt-5 ">
                                                     <img src="img/logogobierno.png" style="width:200px; height:200px;" alt="">
                                                 </div>
-                                                <a href="">¿Ya tienes cuenta?</a>
-                                                <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4">Iniciar sesion</button>
+                                                <div class="contebuton">
+                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button>
+                                                </div>
+                                                    <a href="">¿Ya tienes cuenta?</a>
+                                            </div>  
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                                <!-- Slider 3 del formulario -->
+                                <div class="slider3">
+                                    <div class="row">
+                                        <div class="col col-md-8">
+                                            <h4>ESCOLARIDAD</h4>
+                                            <div class="form-group d-flex">
+                                                <select class="form-control w-100 mr-3" id="exampleFormControlSelect1" name="nvledu">
+                                                    <option disable>Ultimo nivel educativo alcanzado</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                    <option>...</option>
+                                                </select>
+                                            </div>
+                                            
+                                           <div class="contepreguntaform border mb-3 p-3">
+                                                <h6>¿Cuenta con acceso a dispositivos tecnologicos?</h6>
+                                                <div class="conteradio d-flex justify-content-center ">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                        <label class="form-check-label mr-5" for="exampleRadios1">
+                                                            SI
+                                                        </label>
+                                                    </div> 
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                        <label class="form-check-label" for="exampleRadios2">
+                                                            NO
+                                                        </label>
+                                                    </div> 
+                                                </div>
+                                           </div>
+                                           <div class="contepreguntaform border mb-3 p-3">
+                                                <h6>Si la respuesta anterior es SI, ¿Cual o cuales?</h6>
+                                                <div class="conteradio d-flex justify-content-around ">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                        <label class="form-check-label" for="defaultCheck1">
+                                                            T.Movil
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                        <label class="form-check-label" for="defaultCheck1">
+                                                            Computador
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                        <label class="form-check-label" for="defaultCheck1">
+                                                            Tablet
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <input type="text" class="form-control w-75 m-auto" placeholder="¿Otro?, ¿Cual?" id="telefono" name="">
+                                           </div>
+                                           <div class="contepreguntaform border mb-3 p-3">
+                                                <h6>¿Cuenta con conectividad a internet?</h6>
+                                                <div class="conteradio d-flex justify-content-center ">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                        <label class="form-check-label mr-5" for="exampleRadios1">
+                                                            SI
+                                                        </label>
+                                                    </div> 
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                        <label class="form-check-label" for="exampleRadios2">
+                                                            NO
+                                                        </label>
+                                                    </div> 
+                                                </div>
+                                           </div>
+                                            <div class="paginacion" style="text-aling:center; font-weight:bold;">
+                                                <p>3 de 3</p>
+                                            </div>
+                                        </div>
+                                            <div class="col col-md-4">
+                                                <h4>SALUD</h4>
+                                                <div class="contepreguntaform border mb-1 p-3">
+                                                    <h6>Tipo de regimen de afiliacion</h6>
+                                                    <div class="conteradio d-flex justify-content-center ">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                            <label class="form-check-label mr-5" for="exampleRadios1">
+                                                                Subsidiado
+                                                            </label>
+                                                        </div> 
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                            <label class="form-check-label" for="exampleRadios2">
+                                                                Contributivo
+                                                            </label>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                                <div class="contelogo mt-3 ">
+                                                    <img src="img/logogobierno.png" style="width:200px; height:200px;" alt="">
+                                                </div>
+                                                <div class="contebuton">
+                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4">REGISTRARSE</button>
+                                                </div>
+                                                    <a href="">¿Ya tienes cuenta?</a>
                                             </div>  
                                     </div>
                                 </div>
