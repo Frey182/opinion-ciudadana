@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-09-2022 a las 16:05:56
+-- Tiempo de generación: 07-09-2022 a las 16:33:41
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -141,6 +141,9 @@ CREATE TABLE `usuario` (
   `internet` int(2) NOT NULL,
   `acesso_dispositivo` varchar(2) NOT NULL,
   `dispositivo` varchar(100) NOT NULL,
+  `discapacidad` varchar(40) NOT NULL,
+  `estrato` int(11) NOT NULL,
+  `regimen` varchar(10) NOT NULL,
   `fktipo_doc` int(11) NOT NULL,
   `fktipo_usu` int(11) NOT NULL,
   `fketnia` int(11) NOT NULL,
