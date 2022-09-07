@@ -13,7 +13,7 @@ const confirmContrasenia = document.getElementById('confirmContrasenia');
 
 btnSlider1.addEventListener('click', function() {
 
-    // si las contraseñas son iguales y tienen más de un caracter
+    // si las contraseñas son iguales y no están vacíos
     if (contrasenia.value == confirmContrasenia.value & 
         contrasenia.value.length >= 1 & 
         confirmContrasenia.value.length >= 1) {
@@ -25,13 +25,6 @@ btnSlider1.addEventListener('click', function() {
         // removemos los bordes en caso de que estén activos
         contrasenia.classList.remove('border-danger');
         confirmContrasenia.classList.remove('border-danger');
-
-    // si los campos están vacíos
-    } else if (contrasenia.value == "" & confirmContrasenia.value == "") {
-
-    // les añadimos bordes rojos
-        contrasenia.classList.add('border-danger');
-        confirmContrasenia.classList.add('border-danger');
 
     } else {
 
