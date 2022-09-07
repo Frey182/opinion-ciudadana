@@ -1,5 +1,7 @@
 <?php include "../model/conexion.php" ?>
 <?php include "../controller/login.php"?>
+<?php include "../model/seleccion.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,11 +41,28 @@
                             <div class="form-group">
                                 <label for="pwd">Contraseña</label>
                                 <input type="password" class="form-control" placeholder="Ingresa tu contraseña..." id="pwd" name="contrasenia">
+                        <form action="login.php.php">
+                            <div class="form-group d-flex">
+                                <select class="form-control w-100" id="exampleFormControlSelect1" name="fktipo_doc">
+                                    <option disable>Tipo doc</option>
+                                    <?php foreach ($tipo_docs as $tipo_docs) { ?>
+                                    <option value="<?php echo $tipo_docs['id'] ?>"><?php echo $tipo_docs['nombre'] ?></option>
+                                    <?php } ?>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <input type="number" class="form-control" placeholder="Numero de identificacion" id="nif">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Contraseña" id="pwd">
                             </div>
                                 <div class="contebuton">
                                     <button id="btnSlider3" type="submit" class="btn btn-outline-warning font-weight-bold mt-4" name="enviar" value="ingresar">Iniciar sesión</button>
                                 </div>
                                     <a href="register.php">¿Aun no tienes cuenta?</a>
+                                   <div class="mt-3">
+                                   <a href="register.php">¿Aun no tienes cuenta?</a>
+                                   </div>
                         </form>
                     </div>
                 </div>
