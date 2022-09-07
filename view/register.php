@@ -105,23 +105,15 @@
                                             <div class="form-group d-flex">
                                                 <select class="form-control w-50 mr-3" id="exampleFormControlSelect1" id="municipio" name="fkmunicipio">
                                                     <option disable>Municipio</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
+                                                    <?php foreach ($municipios as $municipio) { ?>
+                                                    <option value="<?php echo $municipio['id'] ?>"><?php echo $municipio['nombre'] ?></option>
+                                                    <?php } ?>
                                                 </select>
                                                 <select class="form-control w-50" id="exampleFormControlSelect1" id="barrio" name="fkbarrio">
                                                     <option disable>Barrio/Vereda</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
+                                                    <?php foreach ($barrios as $barrio) { ?>
+                                                    <option value="<?php echo $barrio['id'] ?>"><?php echo $barrio['nombre'] ?></option>
+                                                    <?php } ?>
                                                 </select>
                                             </div> 
                                             <div class="form-group">
@@ -162,7 +154,7 @@
                                                 </select>
                                             </div>
                                             <div class="paginacion d-flex justify-content-center" style="text-aling:center; font-weight:bold;">
-                                                <i class="fa-solid fa-circle-chevron-left" style="font-size:30px; color:#ffc107;"></i>
+                                                <i class="fa-solid fa-circle-chevron-left" style="font-size:30px; color:#ffc107;" id="btnSliderBack1"></i>
                                                 <p class="mr-2 ml-2">2 de 3</p>
                                                 <i class="fa-solid fa-circle-chevron-right" style="font-size:30px; color:#ffc107;" id="btnSlider2"></i>
                                             </div>
@@ -204,13 +196,13 @@
                                                 <h6>¿Cuenta con acceso a dispositivos tecnologicos?</h6>
                                                 <div class="conteradio d-flex justify-content-center ">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                        <input class="form-check-input" type="radio" name="acceso_dispositivo" id="acceso_dispositivo1" value="SI" checked>
                                                         <label class="form-check-label mr-5" for="acesso_dispositivo">
                                                             SI
                                                         </label>
                                                     </div> 
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                        <input class="form-check-input" type="radio" name="acceso_dispositivo" id="acceso_dispositivo2" value="NO">
                                                         <label class="form-check-label" for="acesso_dispositivo">
                                                             NO
                                                         </label>
@@ -221,37 +213,36 @@
                                                 <h6>Si la respuesta anterior es SI, ¿Cual o cuales?</h6>
                                                 <div class="conteradio d-flex justify-content-around ">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="dispositivo">
+                                                        <input class="form-check-input" type="checkbox" value="T.Movil" id="defaultCheck1" name="dispositivo">
                                                         <label class="form-check-label" for="defaultCheck1">
                                                             T.Movil
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="dispositivo">
+                                                        <input class="form-check-input" type="checkbox" value="Computador" id="defaultCheck1" name="dispositivo">
                                                         <label class="form-check-label" for="defaultCheck1">
                                                             Computador
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="dispositivo">
+                                                        <input class="form-check-input" type="checkbox" value="Tablet" id="defaultCheck1" name="dispositivo">
                                                         <label class="form-check-label" for="defaultCheck1">
                                                             Tablet
                                                         </label>
                                                     </div>
                                                 </div>
-                                                <input type="text" class="form-control w-75 m-auto" placeholder="¿Otro?, ¿Cual?" id="telefono" name="dispositivo">
                                            </div>
                                            <div class="contepreguntaform border mb-3 p-3">
                                                 <h6>¿Cuenta con conectividad a internet?</h6>
                                                 <div class="conteradio d-flex justify-content-center ">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="internet" id="exampleRadios1" value="option1" checked>
+                                                        <input class="form-check-input" type="radio" name="internet" id="exampleRadios1" value="SI" checked>
                                                         <label class="form-check-label mr-5" for="exampleRadios1">
                                                             SI
                                                         </label>
                                                     </div> 
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="internet" id="exampleRadios2" value="option2">
+                                                        <input class="form-check-input" type="radio" name="internet" id="exampleRadios2" value="NO">
                                                         <label class="form-check-label" for="exampleRadios2">
                                                             NO
                                                         </label>
@@ -259,7 +250,7 @@
                                                 </div>
                                            </div>
                                            <div class="paginacion d-flex justify-content-center" style="text-aling:center; font-weight:bold;">
-                                                <i class="fa-solid fa-circle-chevron-left" style="font-size:30px; color:#ffc107;" id="btnSlider3"></i>
+                                                <i class="fa-solid fa-circle-chevron-left" style="font-size:30px; color:#ffc107;" id="btnSliderBack2"></i>
                                                 <p class="ml-2">3 de 3</p>
                                             </div>
                                         </div>
@@ -268,13 +259,13 @@
                                                     <h6>Tipo de regimen de afiliacion</h6>
                                                     <div class="conteradio d-flex justify-content-center ">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="regimen" id="exampleRadios1" value="option1" checked>
+                                                            <input class="form-check-input" type="radio" name="regimen" id="exampleRadios1" value="subsidiado" checked>
                                                             <label class="form-check-label mr-5" for="exampleRadios1">
                                                                 Subsidiado
                                                             </label>
                                                         </div> 
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="regimen" id="exampleRadios2" value="option2">
+                                                            <input class="form-check-input" type="radio" name="regimen" id="exampleRadios2" value="contributivo">
                                                             <label class="form-check-label" for="exampleRadios2">
                                                                 Contributivo
                                                             </label>
@@ -285,7 +276,7 @@
                                                     <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="contebuton">
-                                                    <button type="button" class="btn btn-outline-warning font-weight-bold mt-4" name="enviar" value="registrarse">REGISTRARSE</button>
+                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4" name="enviar" value="registrarse">REGISTRARSE</button>
                                                 </div>
                                                     <a href="">¿Ya tienes cuenta?</a>
                                             </div>  
