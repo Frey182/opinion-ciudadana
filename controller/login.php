@@ -43,13 +43,30 @@ if ($_POST) {
                 if ($contrasenia == $confirmContrasenia) {
 
                     // hacemos la insercción en la tabla
-                    $sql = "INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `telefono`, `correo`, `contraseña`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `fkdiscapacidad`, `estrato`, `regimen`,`fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES ('$dni', '$p_nombre ', '$s_nombre', '$apellido_m', '$apellido_p', '$nacimiento', '$telefono', '$correo', '$contrasenia', '$direccion', '$internet ', '$acceso_dispositivo', '$dispositivo', '$discapacidad', '$estrato', '$regimen', '$fktipo_doc', '1', '$fketnia', '$fksexo', '$fknvledu', '$fkbarrio', '$fkmunicipio')";
+                    $sql = "INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `telefono`, `correo`, `contrasenia`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `fkdiscapacidad`, `estrato`, `regimen`,`fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES ('$dni', '$p_nombre ', '$s_nombre', '$apellido_m', '$apellido_p', '$nacimiento', '$telefono', '$correo', '$contrasenia', '$direccion', '$internet ', '$acceso_dispositivo', '$dispositivo', '$discapacidad', '$estrato', '$regimen', '$fktipo_doc', '1', '$fketnia', '$fksexo', '$fknvledu', '$fkbarrio', '$fkmunicipio')";
                     // llamamos al método ejecutar de conexion
                     $objConexion->ejecutar($sql);
 
                 }
-
                 break;
+
+            case 'ingresar':
+                
+                $dni = $_POST['dni'];
+                $contrasenia = $_POST['contrasenia'];
+
+                $sql = "SELECT * FROM `usuario` WHERE `usuario`.`dni` = $dni";
+                $resultado = $objConexion->consultar($sql);
+
+                if ($contrasenia == $resultado[0]['contrasenia']) {
+
+                    echo "<script>alert('Logueado con éxito!')</script>";
+                    
+                } else {
+
+                    echo "<script>alert('Error... Las contraseñas no coinciden')</script>";
+
+                }
             
         }
 
