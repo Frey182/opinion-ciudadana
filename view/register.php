@@ -36,7 +36,7 @@
                                         <div class="col col-md-8">
                                             <h4>IDENTIFICACION</h4>
                                             <div class="form-group d-flex">
-                                                <select class="form-control w-25 mr-3" id="exampleFormControlSelect1" name="tipo_doc">
+                                                <select class="form-control w-25 mr-3" id="exampleFormControlSelect1" name="fktipo_doc">
                                                     <option disable>Tipo doc</option>
                                                     <option>Cedula de ciudadania</option>
                                                     <option>Tarjeta de identidad</option>
@@ -60,7 +60,7 @@
                                                     <input type="text" aria-label="Last name" class="form-control" name="apellido_m">
                                             </div>
                                             <div class="form-group d-flex">
-                                                <select class="form-control w-25" name="sexo">
+                                                <select class="form-control w-25" name="fksexo">
                                                     <option disable>Sexo</option>
                                                     <option>Masculino</opton>
                                                     <option>Femenino</option>
@@ -96,16 +96,16 @@
                                         <div class="col col-md-8">
                                             <h4>GEOGRAFICAS</h4>
                                             <div class="form-group d-flex">
-                                                <input type="text" class="form-control w-50 mr-3" placeholder="Municipio" id="municipio" name="municipio">
-                                                <input type="text" class="form-control w-50" placeholder="Barrio/Vereda" id="barrio" name="barrio">
+                                                <input type="text" class="form-control w-50 mr-3" placeholder="Municipio" id="municipio" name="fkmunicipio">
+                                                <input type="text" class="form-control w-50" placeholder="Barrio/Vereda" id="barrio" name="fkbarrio">
                                             </div> 
                                             <div class="form-group">
                                                 <input type="text" class="form-control w-100" placeholder="Direccion" id="direccion" name="direccion">
                                             </div> 
                                             <h4>ENFOQUE DIFERENCIAL</h4>
                                             <div class="form-group d-flex">
-                                                <input type="date" class="form-control w-75" placeholder="Fecha de nacimiento" id="f_nacimiento" name="f_nacimiento">
-                                                <select class="form-control w-25 mr-3" id="exampleFormControlSelect1" name="tipo_doc">
+                                                <input type="date" class="form-control w-75" placeholder="Fecha de nacimiento" id="f_nacimiento" name="nacimiento">
+                                                <select class="form-control w-25 mr-3" id="exampleFormControlSelect1" name="fketnia">
                                                     <option disable>Etnia</option>
                                                     <option>...</option>
                                                     <option>...</option>
@@ -118,7 +118,7 @@
                                             </div>
                                             <h4>ENFOQUE POBLACIONAL</h4>
                                             <div class="form-group">
-                                                <select class="form-control w-100" id="exampleFormControlSelect1" name="tipo_doc">
+                                                <select class="form-control w-100" id="exampleFormControlSelect1" name="discapacidad">
                                                     <option disable>Condicion de discapacidad</option>
                                                     <option>...</option>
                                                     <option>...</option>
@@ -131,8 +131,8 @@
                                             </div>
                                             <h4>SOCIOECONOMICO</h4>
                                             <div class="form-group">
-                                                <select class="form-control w-100" id="exampleFormControlSelect1" name="tipo_doc">
-                                                    <option disable>Condicion de discapacidad</option>
+                                                <select class="form-control w-100" id="exampleFormControlSelect1" name="estrato">
+                                                    <option disable>Estrato de residencia</option>
                                                     <option>...</option>
                                                     <option>...</option>
                                                     <option>...</option>
@@ -169,7 +169,7 @@
                                         <div class="col col-md-8">
                                             <h4>ESCOLARIDAD</h4>
                                             <div class="form-group d-flex">
-                                                <select class="form-control w-100 mr-3" id="exampleFormControlSelect1" name="nvledu">
+                                                <select class="form-control w-100 mr-3" id="exampleFormControlSelect1" name="fknvledu">
                                                     <option disable>Ultimo nivel educativo alcanzado</option>
                                                     <option>...</option>
                                                     <option>...</option>
@@ -185,13 +185,13 @@
                                                 <div class="conteradio d-flex justify-content-center ">
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                        <label class="form-check-label mr-5" for="exampleRadios1">
+                                                        <label class="form-check-label mr-5" for="acesso_dispositivo">
                                                             SI
                                                         </label>
                                                     </div> 
                                                     <div class="form-check">
                                                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                        <label class="form-check-label" for="exampleRadios2">
+                                                        <label class="form-check-label" for="acesso_dispositivo">
                                                             NO
                                                         </label>
                                                     </div> 
@@ -201,37 +201,37 @@
                                                 <h6>Si la respuesta anterior es SI, ¿Cual o cuales?</h6>
                                                 <div class="conteradio d-flex justify-content-around ">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="dispositivo">
                                                         <label class="form-check-label" for="defaultCheck1">
                                                             T.Movil
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="dispositivo">
                                                         <label class="form-check-label" for="defaultCheck1">
                                                             Computador
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1" name="dispositivo">
                                                         <label class="form-check-label" for="defaultCheck1">
                                                             Tablet
                                                         </label>
                                                     </div>
                                                 </div>
-                                                <input type="text" class="form-control w-75 m-auto" placeholder="¿Otro?, ¿Cual?" id="telefono" name="">
+                                                <input type="text" class="form-control w-75 m-auto" placeholder="¿Otro?, ¿Cual?" id="telefono" name="dispositivo">
                                            </div>
                                            <div class="contepreguntaform border mb-3 p-3">
                                                 <h6>¿Cuenta con conectividad a internet?</h6>
                                                 <div class="conteradio d-flex justify-content-center ">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                        <input class="form-check-input" type="radio" name="internet" id="exampleRadios1" value="option1" checked>
                                                         <label class="form-check-label mr-5" for="exampleRadios1">
                                                             SI
                                                         </label>
                                                     </div> 
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                        <input class="form-check-input" type="radio" name="internet" id="exampleRadios2" value="option2">
                                                         <label class="form-check-label" for="exampleRadios2">
                                                             NO
                                                         </label>
@@ -248,13 +248,13 @@
                                                     <h6>Tipo de regimen de afiliacion</h6>
                                                     <div class="conteradio d-flex justify-content-center ">
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                            <input class="form-check-input" type="radio" name="regimen" id="exampleRadios1" value="option1" checked>
                                                             <label class="form-check-label mr-5" for="exampleRadios1">
                                                                 Subsidiado
                                                             </label>
                                                         </div> 
                                                         <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                            <input class="form-check-input" type="radio" name="regimen" id="exampleRadios2" value="option2">
                                                             <label class="form-check-label" for="exampleRadios2">
                                                                 Contributivo
                                                             </label>
