@@ -1,4 +1,5 @@
 <?php include "view/header.php"?>
+<link rel="stylesheet" href="view/css/estilos.css">
         <div class="contepublicacion">
             <div class="container h-100">
                 <div class="media border p-3 rounded shadow-sm bg-warning">
@@ -14,15 +15,15 @@
                 <div class="media p-3 bg-white ">
                         <img src="" alt="" class="" style="">
                         <div class="media-body text-align-center">
-                            <h4>Nueva publicacion........</h4>
+                            <h4 class="test">Nueva publicacion........</h4>
                             <p>Lorem ipsum...</p>
                         </div>
                 </div>
                 <div class="media bg-warning p-2 rounded-bottom">
                     <div class="input-group mb-1">
-                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                    <textarea class="form-control" row="1" col="50" aria-label="With textarea"></textarea>
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
+                        <button class="btn btn-outline-success" type="button" id="button-addon2">Comentar</button>
                     </div>
                     </div>
                 </div>
