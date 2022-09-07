@@ -155,7 +155,7 @@
                                                 <div class="contelogo mt-5 ">
                                                     <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
-                                                <div class="contebuton">
+                                                <div class="contebuton mt-3">
                                                     <button id="btnSlider2" type="button" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button>
                                                 </div>
                                                     <a href="">¿Ya tienes cuenta?</a>
@@ -270,11 +270,7 @@
                                                     <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="contebuton">
-<<<<<<< HEAD
-                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4" name="enviar" value="registrarse">REGISTRARSE</button>
-=======
                                                     <button id="btnSlider3" type="button" class="btn btn-outline-warning font-weight-bold mt-4">REGISTRARSE</button>
->>>>>>> 363b6b09d8309c9c990506f420b5a062c74c9b1d
                                                 </div>
                                                     <a href="">¿Ya tienes cuenta?</a>
                                             </div>  
