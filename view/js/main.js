@@ -43,6 +43,7 @@ btnSlider1.addEventListener('click', function() {
 
 });
 
+// para deslizarse al slider 3
 btnSlider2.addEventListener('click', function() {
 
     slider2.classList.add('d-none');
@@ -50,6 +51,7 @@ btnSlider2.addEventListener('click', function() {
 
 });
 
+// para retroceder al slider 2
 btnSliderBack1.addEventListener('click', function() {
 
     slider2.classList.add('d-none');
@@ -57,6 +59,7 @@ btnSliderBack1.addEventListener('click', function() {
 
 });
 
+// para retroceder al slider 1
 btnSliderBack2.addEventListener('click', function() {
 
     slider3.classList.add('d-none');
