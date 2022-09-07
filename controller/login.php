@@ -23,6 +23,8 @@ if ($_POST) {
                 $nacimiento = $_POST['nacimiento'];
                 $telefono = $_POST['telefono'];
                 $correo = $_POST['correo'];
+                $contrasenia = $_POST['contrasenia'];
+                $confirmContrasenia = $_POST['confirmContrasenia'];
                 $direccion = $_POST['direccion'];
                 $internet = $_POST['internet'];
                 $acceso_dispositivo = $_POST['acceso_dispositivo'];
@@ -37,10 +39,16 @@ if ($_POST) {
                 $fkbarrio = $_POST['fkbarrio'];
                 $fkmunicipio = $_POST['fkmunicipio'];
 
-                // hacemos la insercción en la tabla
-                $sql = "INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `telefono`, `correo`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `fkdiscapacidad`, `estrato`, `regimen`,`fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES ('$dni', '$p_nombre ', '$s_nombre', '$apellido_m', '$apellido_p', '$nacimiento', '$telefono', '$correo', '$direccion', '$internet ', '$acceso_dispositivo', '$dispositivo', '$discapacidad', '$estrato', '$regimen', '$fktipo_doc', '1', '$fketnia', '$fksexo', '$fknvledu', '$fkbarrio', '$fkmunicipio')";
-                // llamamos al método ejecutar de conexion
-                $objConexion->ejecutar($sql);
+                // confirmamos contraseña
+                if ($contrasenia == $confirmContrasenia) {
+
+                    // hacemos la insercción en la tabla
+                    $sql = "INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `telefono`, `correo`, `contraseña`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `fkdiscapacidad`, `estrato`, `regimen`,`fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES ('$dni', '$p_nombre ', '$s_nombre', '$apellido_m', '$apellido_p', '$nacimiento', '$telefono', '$correo', '$contrasenia', '$direccion', '$internet ', '$acceso_dispositivo', '$dispositivo', '$discapacidad', '$estrato', '$regimen', '$fktipo_doc', '1', '$fketnia', '$fksexo', '$fknvledu', '$fkbarrio', '$fkmunicipio')";
+                    // llamamos al método ejecutar de conexion
+                    $objConexion->ejecutar($sql);
+
+                }
+
                 break;
             
         }
