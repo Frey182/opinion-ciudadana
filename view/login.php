@@ -1,3 +1,6 @@
+<?php include "../model/conexion.php" ?>
+<?php include "../model/seleccion.php" ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,23 +28,31 @@
     <div class="row h-100">
         <div class="col col-md-3"></div>
            <div class="conteform col col-md-6">
-           <br><br><br><br><br><br><br>
+           <br><br><br><br><br>
                 <div class="card shadow rounded">
                     <div class="card-header bg-warning" ><h1 style="color:white;">Inicio de sesion</h1></div>
                     <div class="card-body">
                         <form action="login.php.php">
-                            <div class="form-group">
-                                <label for="nif">No. Identificacion</label>
-                                <input type="number" class="form-control" placeholder="Ingresa tu numero de identificacion..." id="nif">
+                            <div class="form-group d-flex">
+                                <select class="form-control w-100" id="exampleFormControlSelect1" name="fktipo_doc">
+                                    <option disable>Tipo doc</option>
+                                    <?php foreach ($tipo_docs as $tipo_docs) { ?>
+                                    <option value="<?php echo $tipo_docs['id'] ?>"><?php echo $tipo_docs['nombre'] ?></option>
+                                    <?php } ?>
+                                </select>
                             </div>
                             <div class="form-group">
-                                <label for="pwd">Contraseña</label>
-                                <input type="password" class="form-control" placeholder="Ingresa tu contraseña..." id="pwd">
+                                <input type="number" class="form-control" placeholder="Numero de identificacion" id="nif">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" placeholder="Contraseña" id="pwd">
                             </div>
                                 <div class="contebuton">
                                     <button id="btnSlider3" type="button" class="btn btn-outline-warning font-weight-bold mt-4">REGISTRARSE</button>
                                 </div>
-                                    <a href="">¿Aun no tienes cuenta?</a>
+                                   <div class="mt-3">
+                                   <a href="register.php">¿Aun no tienes cuenta?</a>
+                                   </div>
                         </form>
                     </div>
                 </div>
