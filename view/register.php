@@ -1,3 +1,8 @@
+<?php include "../model/conexion.php" ?>
+<?php include "../controller/login.php"?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +34,7 @@
                 <div class="card shadow rounded">
                     <div class="card-header bg-warning" ><h1 style="color:white;">REGISTRO</h1></div>
                     <div class="card-body">     
-                            <form action="register.php">
+                            <form action="register.php" method="post">
                                <!-- Slider 1 del registro -->
                                <div class="slider1">
                                     <div class="row">
@@ -265,7 +270,7 @@
                                                     <img src="img/logogobierno.png" style="width:200px; height:200px;" alt="">
                                                 </div>
                                                 <div class="contebuton">
-                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4">REGISTRARSE</button>
+                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4" name="enviar" value="registrarse">REGISTRARSE</button>
                                                 </div>
                                                     <a href="">¿Ya tienes cuenta?</a>
                                             </div>  
