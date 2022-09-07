@@ -67,25 +67,29 @@
                                                     <input type="text" aria-label="Last name" class="form-control" name="apellido_m">
                                             </div>
                                             <div class="form-group d-flex">
-                                                <select class="form-control w-25" name="fksexo">
+                                                <select class="form-control w-50 mr-3" name="fksexo">
                                                     <option disable>Sexo</option>
                                                     <?php foreach ($sexos as $sexo) { ?>
                                                     <option value="<?php echo $sexo['id'] ?>"><?php echo $sexo['nombre'] ?></option>
                                                     <?php } ?>
                                                 </select>
+                                                <input type="number" class="form-control w-50" placeholder="Telefono celular" id="telefono" name="telefono">
                                             </div>
                                             
                                             <div class="form-group d-flex">
-                                                <input type="number" class="form-control w-25 mr-3" placeholder="Telefono celular" id="telefono" name="telefono">
-                                                <input type="email" class="form-control w-75" placeholder="Correo" id="correo" name="correo">
+                                                <input type="email" class="form-control w-100" placeholder="Correo" id="correo" name="correo">
                                             </div>  
+                                            <div class="form-group d-flex">
+                                                <input type="password" class="form-control w-75 mr-3" placeholder="contraseña" id="contrasenia" name="contrasenia">
+                                                <input type="password" class="form-control w-75" placeholder="confirmar contraseña" id="contrasenia" name="contrasenia">
+                                            </div> 
                                             <div class="paginacion d-flex justify-content-center" style="text-aling:center; font-weight:bold;">
                                                 <p class="mr-2">1 de 3</p>
                                                 <i class="fa-solid fa-circle-chevron-right" style="font-size:30px; color:#ffc107;" id="btnSlider1"></i>
                                             </div>
                                         </div>
                                             <div class="col col-md-4">
-                                                <div class="contelogo mt-1 ">
+                                                <div class="contelogo mt-3 ">
                                                     <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="contebuton mt-3 ">
