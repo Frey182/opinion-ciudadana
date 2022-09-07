@@ -8,10 +8,32 @@ const btnSlider2 = document.getElementById('btnSlider2');
 const btnSliderBack1 = document.getElementById('btnSliderBack1');
 const btnSliderBack2 = document.getElementById('btnSliderBack2');
 
+const contrasenia = document.getElementById('contrasenia');
+const confirmContrasenia = document.getElementById('confirmContrasenia');
+
 btnSlider1.addEventListener('click', function() {
 
-    slider1.classList.add('d-none');
-    slider2.classList.remove('d-none');
+    if (contrasenia.value == confirmContrasenia.value & 
+        contrasenia.value.length >= 1 & 
+        confirmContrasenia.value.length >= 1) {
+
+        slider1.classList.add('d-none');
+        slider2.classList.remove('d-none');
+
+        contrasenia.classList.remove('border-danger');
+        confirmContrasenia.classList.remove('border-danger');
+
+    } else if (contrasenia.value == "" & confirmContrasenia.value == "") {
+
+        contrasenia.classList.add('border-danger');
+        confirmContrasenia.classList.add('border-danger');
+
+    } else {
+
+        contrasenia.classList.add('border-danger');
+        confirmContrasenia.classList.add('border-danger');
+
+    }
 
 });
 
