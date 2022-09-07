@@ -1,7 +1,6 @@
 <?php include "../model/conexion.php" ?>
+<?php include "../model/seleccion.php" ?>
 <?php include "../controller/login.php"?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,9 +42,9 @@
                                             <div class="form-group d-flex">
                                                 <select class="form-control w-25 mr-3" id="exampleFormControlSelect1" name="fktipo_doc">
                                                     <option disable>Tipo doc</option>
-                                                    <option>Cedula de ciudadania</option>
-                                                    <option>Tarjeta de identidad</option>
-                                                    <option>Cedula de extranjeria</option>
+                                                    <?php foreach ($tipo_docs as $tipo_docs) { ?>
+                                                    <option value="<?php echo $tipo_docs['id'] ?>"><?php echo $tipo_docs['nombre'] ?></option>
+                                                    <?php } ?>
                                                 </select>
                                                 <input type="number" class="form-control w-75" placeholder="Ingresa tu numero de identificacion..." id="dni" name="dni">
                                             </div>
@@ -67,9 +66,9 @@
                                             <div class="form-group d-flex">
                                                 <select class="form-control w-25" name="fksexo">
                                                     <option disable>Sexo</option>
-                                                    <option>Masculino</opton>
-                                                    <option>Femenino</option>
-                                                    <option>Otro</option>
+                                                    <?php foreach ($sexos as $sexo) { ?>
+                                                    <option value="<?php echo $sexo['id'] ?>"><?php echo $sexo['nombre'] ?></option>
+                                                    <?php } ?>
                                                 </select>
                                             </div>
                                             <h4>CONTACTO</h4>
@@ -112,39 +111,30 @@
                                                 <input type="date" class="form-control w-75" placeholder="Fecha de nacimiento" id="f_nacimiento" name="nacimiento">
                                                 <select class="form-control w-25 mr-3" id="exampleFormControlSelect1" name="fketnia">
                                                     <option disable>Etnia</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
+                                                    <?php foreach ($etnias as $etnia) { ?>
+                                                    <option value="<?php echo $etnia['id'] ?>"><?php echo $etnia['nombre'] ?></option>
+                                                    <?php } ?>
                                                 </select>
                                             </div>
                                             <h4>ENFOQUE POBLACIONAL</h4>
                                             <div class="form-group">
                                                 <select class="form-control w-100" id="exampleFormControlSelect1" name="discapacidad">
                                                     <option disable>Condicion de discapacidad</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
+                                                    <?php foreach ($discapacidades as $discapacidad) { ?>
+                                                    <option value="<?php echo $discapacidad['id'] ?>"><?php echo $discapacidad['nombre'] ?></option>
+                                                    <?php } ?>
                                                 </select>
                                             </div>
                                             <h4>SOCIOECONOMICO</h4>
                                             <div class="form-group">
                                                 <select class="form-control w-100" id="exampleFormControlSelect1" name="estrato">
                                                     <option disable>Estrato de residencia</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                    <option>6</option>
                                                 </select>
                                             </div>
                                             <div class="paginacion" style="text-aling:center; font-weight:bold;">
@@ -176,12 +166,9 @@
                                             <div class="form-group d-flex">
                                                 <select class="form-control w-100 mr-3" id="exampleFormControlSelect1" name="fknvledu">
                                                     <option disable>Ultimo nivel educativo alcanzado</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
+                                                    <?php foreach ($niveles_educativos as $nivel_educativo) { ?>
+                                                    <option value="<?php echo $nivel_educativo['id'] ?>"><?php echo $nivel_educativo['nombre'] ?></option>
+                                                    <?php } ?>
                                                 </select>
                                             </div>
                                             
