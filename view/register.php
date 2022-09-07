@@ -24,6 +24,9 @@
 
     <!-- Popper JS -->
     <link rel="stylesheet" href="css/estiloslogin.css">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/853c6b208c.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="container-fluid" style="height: 100vh">
@@ -77,8 +80,9 @@
                                                 <input type="number" class="form-control w-25 mr-3" placeholder="Telefono celular" id="telefono" name="telefono">
                                                 <input type="email" class="form-control w-75" placeholder="Correo" id="correo" name="correo">
                                             </div>  
-                                            <div class="paginacion" style="text-aling:center; font-weight:bold;">
-                                                <p>1 de 3</p>
+                                            <div class="paginacion d-flex justify-content-center" style="text-aling:center; font-weight:bold;">
+                                                <p class="mr-2">1 de 3</p>
+                                                <i class="fa-solid fa-circle-chevron-right" style="font-size:30px; color:#ffc107;" id="btnSlider1"></i>
                                             </div>
                                         </div>
                                             <div class="col col-md-4">
@@ -86,7 +90,8 @@
                                                     <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="contebuton">
-                                                    <button id="btnSlider1" type="button" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button>
+                                                   <!--  <button id="btnSlider1" type="button" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button>
+                                                    <button id="btnSlider1" type="button" class="btn btn-outline-warning font-weight-bold mt-4">Atras</button> -->
                                                 </div>
                                                     <a href="">¿Ya tienes cuenta?</a>
                                             </div>  
@@ -147,8 +152,10 @@
                                                     <option>...</option>
                                                 </select>
                                             </div>
-                                            <div class="paginacion" style="text-aling:center; font-weight:bold;">
-                                                <p>2 de 3</p>
+                                            <div class="paginacion d-flex justify-content-center" style="text-aling:center; font-weight:bold;">
+                                                <i class="fa-solid fa-circle-chevron-left" style="font-size:30px; color:#ffc107;"></i>
+                                                <p class="mr-2 ml-2">2 de 3</p>
+                                                <i class="fa-solid fa-circle-chevron-right" style="font-size:30px; color:#ffc107;" id="btnSlider2"></i>
                                             </div>
                                          </div>
                                             <div class="col col-md-4">
@@ -156,7 +163,7 @@
                                                     <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="contebuton mt-3">
-                                                    <button id="btnSlider2" type="button" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button>
+                                                    <!-- <button id="btnSlider2" type="button" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button> -->
                                                 </div>
                                                     <a href="">¿Ya tienes cuenta?</a>
                                             </div>  
@@ -243,8 +250,9 @@
                                                     </div> 
                                                 </div>
                                            </div>
-                                            <div class="paginacion" style="text-aling:center; font-weight:bold;">
-                                                <p>3 de 3</p>
+                                           <div class="paginacion d-flex justify-content-center" style="text-aling:center; font-weight:bold;">
+                                                <i class="fa-solid fa-circle-chevron-left" style="font-size:30px; color:#ffc107;" id="btnSlider3"></i>
+                                                <p class="ml-2">3 de 3</p>
                                             </div>
                                         </div>
                                             <div class="col col-md-4">
@@ -270,7 +278,7 @@
                                                     <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="contebuton">
-                                                    <button id="btnSlider3" type="button" class="btn btn-outline-warning font-weight-bold mt-4">REGISTRARSE</button>
+                                                   <!--  <button id="btnSlider3" type="button" class="btn btn-outline-warning font-weight-bold mt-4">REGISTRARSE</button> -->
                                                 </div>
                                                     <a href="">¿Ya tienes cuenta?</a>
                                             </div>  
