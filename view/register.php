@@ -93,7 +93,7 @@
                                                     <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="contebuton mt-3 ">
-                                                    <a href="">¿Ya tienes cuenta?</a>
+                                                    <a href="login.php">¿Ya tienes cuenta?</a>
                                                 </div>
                                             </div>
                                     </div>
@@ -171,7 +171,7 @@
                                                     <!-- <button id="btnSlider2" type="button" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button> -->
                                                 </div>
                                                 <div class="contebuton mt-3 ">
-                                                    <a href="">¿Ya tienes cuenta?</a>
+                                                    <a href="login.php">¿Ya tienes cuenta?</a>
                                                 </div>
                                             </div>  
                                     </div>
@@ -282,7 +282,7 @@
                                                 <div class="contebuton">
                                                     <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4" name="enviar" value="registrarse">REGISTRARSE</button>
                                                 </div>
-                                                    <a href="">¿Ya tienes cuenta?</a>
+                                                    <a href="login.php">¿Ya tienes cuenta?</a>
                                             </div>  
                                     </div>
                                 </div>
