@@ -19,42 +19,56 @@
 
     <!-- CSS-->
     <link rel="stylesheet" href="view/css/estilos.css">
+    <!-- Font Awesome-->
+    <script src="https://kit.fontawesome.com/853c6b208c.js" crossorigin="anonymous"></script>
 </head>
 <body style="background-color: #EEF2E6">
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning">
-        <a class="navbar-brand" href="#">Opinion Ciudadana</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
-                    Dropdown
-                    </a>
-                    <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning w-100">
+        <div class="container">
+            <div class="row">
+                <div class="collapse navbar-collapse w-100" id="navbarSupportedContent">
+                    <div class="col col-md-4">
+                        <a class="navbar-brand mr-5" href="#">Opinion Ciudadana</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
                     </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                 
-                <button type="submit" class="btn btn-outline-light font-weight-bold">Buscar</button>
-            </form>
+                    <div class="col col-md-8">
+                        <form class="form-inline my-2 my-lg-0 w-100 d-flex space-around">
+                            <div class="contebarra" style="width:90%">
+                                <input class="form-control  w-100" type="search" placeholder="Buscar" aria-label="Search">
+                            </div> 
+                            <div class="conteiconobusqueda" style="width:10%">
+                                <button type="submit" class="btn btn-outline-light font-weight-bold w-100 ml-3"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col col-md-4 d-flex space-around">
+                    <ul class="navbar-nav mr-auto">
+                            <li class="nav-item dropdown">
+                                <div class="dropdown">
+                                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa-solid fa-user"></i>
+                                    </a>
+
+                                    <div class="dropdown-menu dropdown-menu-left">
+                                        <a class="dropdown-item" href="#">Action</a>
+                                        <a class="dropdown-item" href="#">Another action</a>
+                                        <a class="dropdown-item" href="#">Something else here</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">DDD<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Link</a>
+                            </li>
+                        
+                        </ul>
+                    </div>  
+                </div>
+            </div> 
         </div>
     </nav>
     <div class="container p-5 w-75" style="height:100vh;">
