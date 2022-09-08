@@ -1,3 +1,4 @@
+<?php include "model/conexion.php"?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,10 +20,15 @@
 
     <!-- CSS-->
     <link rel="stylesheet" href="view/css/estilos.css">
+
     <!-- Font Awesome-->
     <script src="https://kit.fontawesome.com/853c6b208c.js" crossorigin="anonymous"></script>
+
+     <!-- Sweet Alert -->
+     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body style="background-color: #EEF2E6">
+<?php include "controller/login.php"?>
     <nav class="navbar navbar-expand-lg navbar-light bg-warning ">
                 <a class="navbar-brand mr-5" href="#">Opinion Ciudadana</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,11 +51,16 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                                 <div class="contedatos d-flex">
                                     <div class="fondo bg-warning rounded-circle d-flex justify-content-center align-items-center mr-2 ml-2" style="width:50px; height:50px;">
-                                        <h1 class="m-auto text-dark">D</h1>
+                                        <h1 class="m-auto text-dark">
+                                            <?php 
+                                                $nombre=$_SESSION['nombre'];
+                                                echo $nombre[0];
+                                            ?>
+                                        </h1>
                                     </div>
-                                    <div class="text mr-2">
-                                    <h6>Duvan Bolaño</h6>
-                                    <p>Duvan@gmail.com</p>
+                                    <div class="text mr-1">
+                                    <h6><?php echo $_SESSION['nombre'] ?></h6>
+                                    <p><?php echo $_SESSION['correo'] ?></p>
                                     </div>
                                 </div>
                                <div class="conteaccion">
@@ -57,7 +68,7 @@
                                         <button class="dropdown-item text-align-left" type="button">Configuracion </button><i class="fa-solid fa-gear text-right mt-2 mr-3"></i>
                                     </div>
                                     <div class="d-flex">
-                                        <form action="" method="post" class="d-flex w-100">
+                                        <form action="index.php" method="post" class="d-flex w-100">
                                         <button class="dropdown-item text-align-left" type="submit" name="enviar" value="logout">Cerrar sesion </button><i class="fa-solid fa-arrow-right-from-bracket  text-right mt-2 mr-3"></i>
                                         </form>
                                     </div>
