@@ -1,8 +1,8 @@
-<?php include "view/header.php"?>
 <?php 
 session_start();
 print_r($_SESSION); 
 ?>
+<?php include "view/header.php"?>
         <div class="contepublicacion">
             <div class="container h-100">
                 <div class="card">
