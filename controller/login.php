@@ -50,6 +50,10 @@ if ($_POST) {
                 }
 
                 break;
+
+                case 'logout':
+                    session_destroy();
+                    break
             
         }
 
