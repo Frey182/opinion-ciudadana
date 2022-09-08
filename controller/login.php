@@ -49,6 +49,20 @@ if ($_POST) {
 
                 }
                 break;
+
+                case 'logout':
+                    session_destroy();
+
+                    ?>
+                    <script>
+
+                        alert('Deslogueado con éxito!');
+
+                            location.href="view/login.php"  
+
+                    </script>
+                    <?php
+                    break;
             
             // si es el botón para loguearte
             case 'ingresar':
@@ -59,7 +73,7 @@ if ($_POST) {
                 $contrasenia = $_POST['contrasenia'];
 
                 // consultamos en la tabla según el dni
-                $sql = "SELECT * FROM `usuario` WHERE `usuario`.`dni` = $dni";
+                $sql = "SELECT * FROM usuario u JOIN tipo_usu t ON u.fktipo_usu = t.id WHERE dni=$dni";
                 $resultado = $objConexion->consultar($sql);
 
                 // si la contraseña y tipo de documento SÍ pertenecen al usuario consultado
@@ -69,7 +83,7 @@ if ($_POST) {
                     session_start();
 
                     // almacenamos los datos del usuario en la variable
-                    $_SESSION = array("nombre"=>$resultado[0]['p_nombre']. " ". $resultado[0]['s_nombre']. " ". $resultado[0]['apellido_p'] . " ". $resultado[0]['apellido_m'], "correo"=>$resultado[0]['correo'], "tipo_usu"=>$resultado[0]['fktipo_usu']);
+                    $_SESSION = array("nombre"=>$resultado[0]['p_nombre']. " ". $resultado[0]['s_nombre']. " ". $resultado[0]['apellido_p'] . " ". $resultado[0]['apellido_m'], "correo"=>$resultado[0]['correo'], "tipo_usu"=>$resultado[0]['']);
 
                     ?>
                     <script>
