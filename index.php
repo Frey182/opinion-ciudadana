@@ -1,5 +1,8 @@
+<?php 
+session_start();
+print_r($_SESSION); 
+?>
 <?php include "view/header.php"?>
-<link rel="stylesheet" href="view/css/estilos.css">
         <div class="contepublicacion">
             <div class="container h-100">
                 <div class="card">
@@ -37,15 +40,11 @@
                         </div>   
                     </div>
                 </div>
-                    
-                <div class="media ">
-                   
-                </div>
-                <div class="media p-2 rounded-bottom" style="background-color: white;">
-                    <div class="input-group mb-1">
-                    <textarea class="form-control bg-light" row="1" col="50" aria-label="With textarea"></textarea>
+                <div class="media bg-warning p-2 rounded-bottom">
+                    <div class="input-group mb-1 texto">
+                    <textarea class="form-control texto" row="1" col="50" aria-label="With textarea"></textarea>
                     <div class="input-group-append">
-                        <button class="btn btn-warning" type="button" id="button-addon2">Comentar</button>
+                        <button class="btn btn-outline-success font-weight-bold" type="button" id="button-addon2">Comentar</button>
                     </div>
                     </div>
                 </div>

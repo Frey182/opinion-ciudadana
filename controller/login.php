@@ -43,17 +43,54 @@ if ($_POST) {
                 if ($contrasenia == $confirmContrasenia) {
 
                     // hacemos la insercción en la tabla
-                    $sql = "INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `telefono`, `correo`, `contraseña`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `fkdiscapacidad`, `estrato`, `regimen`,`fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES ('$dni', '$p_nombre ', '$s_nombre', '$apellido_m', '$apellido_p', '$nacimiento', '$telefono', '$correo', '$contrasenia', '$direccion', '$internet ', '$acceso_dispositivo', '$dispositivo', '$discapacidad', '$estrato', '$regimen', '$fktipo_doc', '1', '$fketnia', '$fksexo', '$fknvledu', '$fkbarrio', '$fkmunicipio')";
+                    $sql = "INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `telefono`, `correo`, `contrasenia`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `fkdiscapacidad`, `estrato`, `regimen`,`fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES ('$dni', '$p_nombre ', '$s_nombre', '$apellido_m', '$apellido_p', '$nacimiento', '$telefono', '$correo', '$contrasenia', '$direccion', '$internet ', '$acceso_dispositivo', '$dispositivo', '$discapacidad', '$estrato', '$regimen', '$fktipo_doc', '1', '$fketnia', '$fksexo', '$fknvledu', '$fkbarrio', '$fkmunicipio')";
                     // llamamos al método ejecutar de conexion
                     $objConexion->ejecutar($sql);
 
                 }
-
                 break;
 
                 case 'logout':
                     session_destroy();
                     break
+            
+            // si es el botón para loguearte
+            case 'ingresar':
+                
+                // almacenamos los valores de los inputs
+                $fktipo_doc = $_POST['fktipo_doc'];
+                $dni = $_POST['dni'];
+                $contrasenia = $_POST['contrasenia'];
+
+                // consultamos en la tabla según el dni
+                $sql = "SELECT * FROM `usuario` WHERE `usuario`.`dni` = $dni";
+                $resultado = $objConexion->consultar($sql);
+
+                // si la contraseña y tipo de documento SÍ pertenecen al usuario consultado
+                if (($contrasenia == $resultado[0]['contrasenia']) && ($fktipo_doc == $resultado[0]['fktipo_doc'])) {
+
+                    // iniciamos el session
+                    session_start();
+
+                    // almacenamos los datos del usuario en la variable
+                    $_SESSION = array("nombre"=>$resultado[0]['p_nombre']. " ". $resultado[0]['s_nombre']. " ". $resultado[0]['apellido_p'] . " ". $resultado[0]['apellido_m'], "correo"=>$resultado[0]['correo'], "tipo_usu"=>$resultado[0]['fktipo_usu']);
+
+                    ?>
+                    <script>
+
+                        alert('Logueado con éxito!');
+
+                        setTimeout(function(){
+                            location.href="../index.php"
+                        } , 1000);  
+
+                    </script>
+                    <?php
+                } else {
+
+                    echo "<script>alert('Error... Las contraseñas no coinciden')</script>";
+
+                }
             
         }
 

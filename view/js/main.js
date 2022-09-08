@@ -13,7 +13,7 @@ const confirmContrasenia = document.getElementById('confirmContrasenia');
 
 btnSlider1.addEventListener('click', function() {
 
-    // si las contraseñas son iguales y tienen más de un caracter
+    // si las contraseñas son iguales y no están vacíos
     if (contrasenia.value == confirmContrasenia.value & 
         contrasenia.value.length >= 1 & 
         confirmContrasenia.value.length >= 1) {
@@ -26,13 +26,6 @@ btnSlider1.addEventListener('click', function() {
         contrasenia.classList.remove('border-danger');
         confirmContrasenia.classList.remove('border-danger');
 
-    // si los campos están vacíos
-    } else if (contrasenia.value == "" & confirmContrasenia.value == "") {
-
-    // les añadimos bordes rojos
-        contrasenia.classList.add('border-danger');
-        confirmContrasenia.classList.add('border-danger');
-
     } else {
 
         // les añadimos bordes rojos
@@ -43,6 +36,7 @@ btnSlider1.addEventListener('click', function() {
 
 });
 
+// para deslizarse al slider 3
 btnSlider2.addEventListener('click', function() {
 
     slider2.classList.add('d-none');
@@ -50,6 +44,7 @@ btnSlider2.addEventListener('click', function() {
 
 });
 
+// para retroceder al slider 2
 btnSliderBack1.addEventListener('click', function() {
 
     slider2.classList.add('d-none');
@@ -57,6 +52,7 @@ btnSliderBack1.addEventListener('click', function() {
 
 });
 
+// para retroceder al slider 1
 btnSliderBack2.addEventListener('click', function() {
 
     slider3.classList.add('d-none');

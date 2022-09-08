@@ -17,6 +17,8 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- CSS-->
+    <link rel="stylesheet" href="view/css/estilos.css">
     <!-- Font Awesome-->
     <script src="https://kit.fontawesome.com/853c6b208c.js" crossorigin="anonymous"></script>
 </head>

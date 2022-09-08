@@ -81,7 +81,7 @@
                                             </div>  
                                             <div class="form-group d-flex">
                                                 <input type="password" class="form-control w-75 mr-3" placeholder="contraseña" id="contrasenia" name="contrasenia">
-                                                <input type="password" class="form-control w-75" placeholder="confirmar contraseña" id="confirmContrasenia" name="contrasenia">
+                                                <input type="password" class="form-control w-75" placeholder="confirmar contraseña" id="confirmContrasenia" name="confirmContrasenia">
                                             </div> 
                                             <div class="paginacion d-flex justify-content-center" style="text-aling:center; font-weight:bold;">
                                                 <p class="mr-2">1 de 3</p>
@@ -98,8 +98,6 @@
                                             </div>
                                     </div>
                                 </div>
-
-
 
                                 <!-- Slider 2 del registro -->
                                 <div class="slider2 d-none" id="slider2">
