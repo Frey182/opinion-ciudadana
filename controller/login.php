@@ -71,8 +71,17 @@ if ($_POST) {
                     // almacenamos los datos del usuario en la variable
                     $_SESSION = array("nombre"=>$resultado[0]['p_nombre']. " ". $resultado[0]['s_nombre']. " ". $resultado[0]['apellido_p'] . " ". $resultado[0]['apellido_m'], "correo"=>$resultado[0]['correo'], "tipo_usu"=>$resultado[0]['fktipo_usu']);
 
-                    echo "<script>alert('Logueado con éxito!')</script>";
-                    
+                    ?>
+                    <script>
+
+                        alert('Logueado con éxito!');
+
+                        setTimeout(function(){
+                            location.href="../index.php"
+                        } , 1000);  
+
+                    </script>
+                    <?php
                 } else {
 
                     echo "<script>alert('Error... Las contraseñas no coinciden')</script>";
