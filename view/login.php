@@ -34,14 +34,6 @@
                     <div class="card-header bg-warning" ><h1 style="color:white;">Inicio de sesion</h1></div>
                     <div class="card-body">
                         <form action="login.php" method="post">
-                            <div class="form-group">
-                                <label for="nif">No. Identificacion</label>
-                                <input type="number" class="form-control" placeholder="Ingresa tu numero de identificacion..." id="nif" name="dni">
-                            </div>
-                            <div class="form-group">
-                                <label for="pwd">Contraseña</label>
-                                <input type="password" class="form-control" placeholder="Ingresa tu contraseña..." id="pwd" name="contrasenia">
-                        <form action="login.php.php">
                             <div class="form-group d-flex">
                                 <select class="form-control w-100" id="exampleFormControlSelect1" name="fktipo_doc">
                                     <option disable>Tipo doc</option>
@@ -51,18 +43,15 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <input type="number" class="form-control" placeholder="Numero de identificacion" id="nif">
+                                <input type="number" class="form-control" placeholder="Numero de identificacion" id="nif" name="dni">
                             </div>
                             <div class="form-group">
-                                <input type="password" class="form-control" placeholder="Contraseña" id="pwd">
+                                <input type="password" class="form-control" placeholder="Contraseña" id="pwd" name="contrasenia">
                             </div>
                                 <div class="contebuton">
                                     <button id="btnSlider3" type="submit" class="btn btn-outline-warning font-weight-bold mt-4" name="enviar" value="ingresar">Iniciar sesión</button>
                                 </div>
                                     <a href="register.php">¿Aun no tienes cuenta?</a>
-                                   <div class="mt-3">
-                                   <a href="register.php">¿Aun no tienes cuenta?</a>
-                                   </div>
                         </form>
                     </div>
                 </div>

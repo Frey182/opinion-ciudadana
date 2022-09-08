@@ -99,8 +99,6 @@
                                     </div>
                                 </div>
 
-
-
                                 <!-- Slider 2 del registro -->
                                 <div class="slider2 d-none" id="slider2">
                                     <div class="row">
