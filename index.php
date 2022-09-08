@@ -1,4 +1,8 @@
 <?php include "view/header.php"?>
+<?php 
+session_start();
+print_r($_SESSION); 
+?>
         <div class="contepublicacion">
             <div class="container h-100">
                 <div class="media border p-3 rounded shadow-sm bg-warning">
