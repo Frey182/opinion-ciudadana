@@ -1,6 +1,5 @@
 <?php include "../model/conexion.php" ?>
 <?php include "../model/seleccion.php" ?>
-<?php include "../controller/login.php"?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,8 +25,13 @@
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/853c6b208c.js" crossorigin="anonymous"></script>
+
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 <body>
+<?php include "../controller/login.php"?>
 <div class="container-fluid" style="height: 100vh">
     <div class="row h-100">
         <div class="col col-md-2"></div>
