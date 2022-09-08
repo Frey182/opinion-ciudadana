@@ -2,10 +2,37 @@
 session_start();
 print_r($_SESSION); 
 ?>
-<?php include "view/header.php"?>
+<?php include "controller/publicar.php"; ?>
+<?php include "view/header.php"; ?>
         <div class="contepublicacion">
             <div class="container h-100">
-                <div class="card">
+            <div class="card">
+                    <div class="card-header d-flex border p-3 rounded shadow-sm bg-warning">
+                        <div class="conteimguser">
+                            <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
+                        </div>
+                        <div class="contenameusu">
+                        <form action="index.php" method="post">
+                            <div class="form-group w-100">
+                                <input type="text" class="form-control" placeholder="Título" id="text" name="nombre">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body p-3 bg-white">
+                        <div class="media-body text-align-center">
+                                <div class="form-group">
+                                    <textarea name="descripcion" class="form-control" placeholder="Escribe tu contenido" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button name="enviar" value="publicartema" type="submit" class="btn btn-success">Publicar</button>
+                                    <button class="btn btn-primary rounded-circle" style="height: 50px; width: 50px;"></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card d-none">
                     <div class="card-header d-flex border p-3 rounded shadow-sm bg-warning">
                         <div class="conteimguser">
                             <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
@@ -39,13 +66,15 @@ print_r($_SESSION);
                             </div>
                         </div>   
                     </div>
-                </div>
-                <div class="media bg-warning p-2 rounded-bottom">
-                    <div class="input-group mb-1 texto">
-                    <textarea class="form-control texto" row="1" col="50" aria-label="With textarea"></textarea>
-                    <div class="input-group-append">
-                        <button class="btn btn-outline-success font-weight-bold" type="button" id="button-addon2">Comentar</button>
-                    </div>
+                    <div class="media bg-warning p-2 rounded-bottom">
+                        <form action="" class="w-100">
+                            <div class="input-group mb-1 texto">
+                                <textarea class="form-control texto" row="1" col="50" aria-label="With textarea"></textarea>
+                                    <div class="input-group-append">
+                                    <button class="btn btn-outline-success font-weight-bold" type="button" id="button-addon2">Comentar</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>

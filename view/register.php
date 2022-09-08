@@ -294,6 +294,6 @@
         <div class="col col-md-2"></div>
     </div>
 </div>
-<script src="js/main.js"></script>
+<script src="js/sliderregister.js"></script>
 </body>
 </html>
