@@ -49,16 +49,27 @@ if ($_POST) {
 
                 }
                 break;
-
+            
+            // si es el botón para loguearte
             case 'ingresar':
                 
+                // almacenamos los valores de los inputs
+                $fktipo_doc = $_POST['fktipo_doc'];
                 $dni = $_POST['dni'];
                 $contrasenia = $_POST['contrasenia'];
 
+                // consultamos en la tabla según el dni
                 $sql = "SELECT * FROM `usuario` WHERE `usuario`.`dni` = $dni";
                 $resultado = $objConexion->consultar($sql);
 
-                if ($contrasenia == $resultado[0]['contrasenia']) {
+                // si la contraseña y tipo de documento SÍ pertenecen al usuario consultado
+                if (($contrasenia == $resultado[0]['contrasenia']) && ($fktipo_doc == $resultado[0]['fktipo_doc'])) {
+
+                    // iniciamos el session
+                    session_start();
+
+                    // almacenamos los datos del usuario en la variable
+                    $_SESSION = array("nombre"=>$resultado[0]['p_nombre']. " ". $resultado[0]['s_nombre']. " ". $resultado[0]['apellido_p'] . " ". $resultado[0]['apellido_m'], "correo"=>$resultado[0]['correo'], "tipo_usu"=>$resultado[0]['fktipo_usu']);
 
                     echo "<script>alert('Logueado con éxito!')</script>";
                     
