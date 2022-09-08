@@ -2,11 +2,13 @@
 session_start();
 print_r($_SESSION); 
 ?>
+<?php include "model/conexion.php"; ?>
+<?php include "model/seleccion.php"; ?>
 <?php include "controller/publicar.php"; ?>
 <?php include "view/header.php"; ?>
         <div class="contepublicacion">
             <div class="container h-100">
-            <div class="card">
+            <div class="card mb-3">
                     <div class="card-header d-flex border p-3 rounded shadow-sm bg-warning">
                         <div class="conteimguser">
                             <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
@@ -32,40 +34,42 @@ print_r($_SESSION);
                     </div>
                 </div>
 
-                <div class="card d-none">
+                <?php foreach ($temas as $tema) { ?>
+                    <div class="card mb-3">
                     <div class="card-header d-flex border p-3 rounded shadow-sm bg-warning">
                         <div class="conteimguser">
                             <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
                         </div>
                         <div class="contenameusu">
-                            <h4>Duvan Bolaño <small><i>Posted on February 19, 2016</i></small></h4>
-                            <p>Duvan@gmail.com</p>
+                            <h4><?php echo $tema['nombre']; ?> <small><i>Publicado <?php echo $tema['fecha']; ?></i></small></h4>
+                            <p><?php echo $tema['correo']; ?></p>
                         </div>
                     </div>
                     <div class="card-body p-3 bg-white">
                         
                         <div class="media-body text-align-center">
-                            <h4 class="test">Nueva publicacion........</h4>
-                            <p>Lorem ipsum...</p>
+                            <p><?php echo $tema['descripcion']; ?></p>
                             <img src="" alt="" class="" style="">
                         </div>
                     </div>
-                    <div class="card-footer text-muted">
-                        <div class="media border p-3">
-                            <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
-                            <div class="media-body">
-                                <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
-                                <p>Lorem ipsum...</p>
-                                <div class="media p-3">
-                                <img src="view/img/logogobierno.png" alt="Jane Doe" class="mr-3 mt-1 rounded-circle" style="width:45px;">
+                    <?php foreach ($comentarios as $comentario) { ?>
+                        <div class="card-footer text-muted">
+                            <div class="media border p-3">
+                                <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
                                 <div class="media-body">
-                                    <h4>Jane Doe <small><i>Posted on February 20 2016</i></small></h4>
+                                    <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
                                     <p>Lorem ipsum...</p>
+                                    <div class="media p-3">
+                                    <img src="view/img/logogobierno.png" alt="Jane Doe" class="mr-3 mt-1 rounded-circle" style="width:45px;">
+                                    <div class="media-body">
+                                        <h4>Jane Doe <small><i>Posted on February 20 2016</i></small></h4>
+                                        <p>Lorem ipsum...</p>
+                                    </div>
+                                    </div> 
                                 </div>
-                                </div> 
-                            </div>
-                        </div>   
-                    </div>
+                            </div>   
+                        </div>
+                    <?php } ?>
                     <div class="media bg-warning p-2 rounded-bottom">
                         <form action="" class="w-100">
                             <div class="input-group mb-1 texto">
@@ -77,6 +81,7 @@ print_r($_SESSION);
                         </form>
                     </div>
                 </div>
+                <?php } ?>
             </div>
         </div>
 <?php include "view/footer.php"?>

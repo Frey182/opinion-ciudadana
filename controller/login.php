@@ -83,7 +83,7 @@ if ($_POST) {
                     session_start();
 
                     // almacenamos los datos del usuario en la variable
-                    $_SESSION = array("nombre"=>$resultado[0]['p_nombre']. " ". $resultado[0]['s_nombre']. " ". $resultado[0]['apellido_p'] . " ". $resultado[0]['apellido_m'], "correo"=>$resultado[0]['correo'], "tipo_usu"=>$resultado[0]['']);
+                    $_SESSION = array("dni"=>$resultado[0]['dni'], "nombre"=>$resultado[0]['p_nombre']. " ". $resultado[0]['s_nombre']. " ". $resultado[0]['apellido_p'] . " ". $resultado[0]['apellido_m'], "correo"=>$resultado[0]['correo'], "tipo_usu"=>$resultado[0]['nombre']);
 
                     ?>
                     <script>
