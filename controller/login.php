@@ -78,18 +78,9 @@ if ($_POST) {
                     session_destroy();
 
                     ?>
-                    <script>
- 
-                        Swal.fire({
-                            icon: 'success',
-                            text: 'Cerrando session...!',
-                            })
-
-                            setTimeout(function(){
-                            location.href="view/login.php"
-                        } , 1000);  
- 
-                    </script>
+                        <script>
+                            location.href="view/login.php"  
+                        </script>
                     <?php
                     break;
             

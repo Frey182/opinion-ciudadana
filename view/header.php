@@ -1,3 +1,4 @@
+<?php include "model/conexion.php" ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

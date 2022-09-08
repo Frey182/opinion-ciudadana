@@ -20,7 +20,21 @@ if ($_POST) {
                 $sql = "INSERT INTO `tema` (`id`, `nombre`, `descripcion`, `imagen`, `fecha`, `fkusuario`) VALUES (NULL, '$nombre', '$descripcion', 'imagen', '$fecha', '$dni')";
                 // llamamos al método ejecutar de conexion
                 $objConexion->ejecutar($sql);
-                header('location: index.php');
+                ?>
+                <script>
+
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Realizado',
+                        text: 'Tu post se ha subido exitosamente',
+                        })
+
+                    setTimeout(function(){
+                        location.href="index.php"
+                    } , 1000);  
+
+                </script>
+                <?php
                 break;
 
         }

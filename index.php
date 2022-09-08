@@ -1,10 +1,7 @@
-<?php 
-session_start();
-print_r($_SESSION); 
-?>
+<?php session_start();?>
 <?php include "view/header.php"?>
-<?php include "model/conexion.php"?>
 <?php include "model/seleccion.php"?>
+<?php include "controller/publicar.php"?>
         <div class="contepublicacion">
             <div class="container h-100">
 
