@@ -42,7 +42,7 @@
                             <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa-solid fa-user"></i>
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                                 <button class="dropdown-item" type="button">Action</button>
                                 <button class="dropdown-item" type="button">Another action</button>
                                 <button class="dropdown-item" type="button">Something else here</button>
@@ -52,7 +52,7 @@
                             <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa-solid fa-user"></i>
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                                 <button class="dropdown-item" type="button">Action</button>
                                 <button class="dropdown-item" type="button">Another action</button>
                                 <button class="dropdown-item" type="button">Something else here</button>
@@ -62,7 +62,7 @@
                             <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa-solid fa-user"></i>
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                                 <button class="dropdown-item" type="button">Action</button>
                                 <button class="dropdown-item" type="button">Another action</button>
                                 <button class="dropdown-item" type="button">Something else here</button>
