@@ -40,11 +40,11 @@ print_r($_SESSION);
                         </div>   
                     </div>
                 </div>
-                <div class="media bg-warning p-2 rounded-bottom">
+                <div class="media bg-white p-2 rounded-bottom">
                     <div class="input-group mb-1 texto">
-                    <textarea class="form-control texto" row="1" col="50" aria-label="With textarea"></textarea>
+                    <textarea class="form-control texto bg-light" row="1" col="50" aria-label="With textarea"></textarea>
                     <div class="input-group-append">
-                        <button class="btn btn-outline-success font-weight-bold" type="button" id="button-addon2">Comentar</button>
+                        <button class="btn btn-outline-warning font-weight-bold" type="button" id="button-addon2">Comentar</button>
                     </div>
                     </div>
                 </div>
