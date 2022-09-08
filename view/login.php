@@ -1,5 +1,4 @@
 <?php include "../model/conexion.php" ?>
-<?php include "../controller/login.php"?>
 <?php include "../model/seleccion.php" ?>
 
 <!DOCTYPE html>
@@ -23,8 +22,12 @@
 
     <!-- Popper JS -->
     <link rel="stylesheet" href="css/estiloslogin.css">
+
+    <!-- Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+<?php include "../controller/login.php"?>
 <div class="container-fluid" style="height: 100vh">
     <div class="row h-100">
         <div class="col col-md-3"></div>

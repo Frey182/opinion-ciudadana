@@ -3,41 +3,10 @@ session_start();
 print_r($_SESSION); 
 ?>
 <?php include "view/header.php"?>
-<?php include "model/conexion.php"?>
-<?php include "model/seleccion.php"?>
         <div class="contepublicacion">
             <div class="container h-100">
-
-                <?php if($_SESSION['tipo_usu']=="administrador"){ ?>
-                    <div class="card mb-3">
-                        <div class="card-header d-flex border p-3 rounded shadow-sm bg-warning">
-                            <div class="conteimguser">
-                                <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
-                            </div>
-                            <div class="contenameusu">
-                            <form action="index.php" method="post">
-                                <div class="form-group w-100">
-                                    <input type="text" class="form-control" placeholder="Título" id="text" name="nombre">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card-body p-3 bg-white">
-                            <div class="media-body text-align-center">
-                                    <div class="form-group">
-                                        <textarea name="descripcion" class="form-control" placeholder="Escribe tu contenido" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <button name="enviar" value="publicartema" type="submit" class="btn btn-success">Publicar</button>
-                                        <button class="btn btn-primary rounded-circle" style="height: 50px; width: 50px;"></button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                <?php } ?>
-
                 <?php foreach ($temas as $tema) { ?>
-                   <div class="card mb-3">
+                   <div class="card">
                         <div class="card-header d-flex border p-3 rounded shadow-sm bg-warning">
                             <div class="conteimguser">
                                 <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
@@ -82,6 +51,36 @@ print_r($_SESSION);
                         </div>
                    </div> 
                 <?php } ?>
+
+                    
+               <?php if($_SESSION['tipo_usu']=="administrador"){ ?>
+                    <div class="card mb-3">
+                        <div class="card-header d-flex border p-3 rounded shadow-sm bg-warning">
+                            <div class="conteimguser">
+                                <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
+                            </div>
+                            <div class="contenameusu">
+                            <form action="index.php" method="post">
+                                <div class="form-group w-100">
+                                    <input type="text" class="form-control" placeholder="Título" id="text" name="nombre">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-3 bg-white">
+                            <div class="media-body text-align-center">
+                                    <div class="form-group">
+                                        <textarea name="descripcion" class="form-control" placeholder="Escribe tu contenido" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <button name="enviar" value="publicartema" type="submit" class="btn btn-success">Publicar</button>
+                                        <button class="btn btn-primary rounded-circle" style="height: 50px; width: 50px;"></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+               <?php } ?>
+                
             </div>
         </div>
 <?php include "view/footer.php"?>

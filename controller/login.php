@@ -47,6 +47,30 @@ if ($_POST) {
                     // llamamos al método ejecutar de conexion
                     $objConexion->ejecutar($sql);
 
+
+                    // iniciamos el session
+                    session_start();
+
+                    // almacenamos los datos del usuario en la variable
+                    $_SESSION = array("nombre"=>$p_nombre. " ".  $s_nombre. " ". $apellido_p . " ". $apellido_m,  "correo"=>$correo, "tipo_usu"=>"usuario");
+                    
+                    ?>
+                    <script>
+
+                        /* alert('Registrado con éxito!'); */
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Realizado',
+                            text: 'Se ha registrado con exito!',
+                            })
+
+                        setTimeout(function(){
+                            location.href="../index.php"
+                        } , 1000);  
+
+                    </script>
+                    <?php
+
                 }
                 break;
 
@@ -55,11 +79,16 @@ if ($_POST) {
 
                     ?>
                     <script>
+ 
+                        Swal.fire({
+                            icon: 'success',
+                            text: 'Cerrando session...!',
+                            })
 
-                        alert('Deslogueado con éxito!');
-
-                            location.href="view/login.php"  
-
+                            setTimeout(function(){
+                            location.href="view/login.php"
+                        } , 1000);  
+ 
                     </script>
                     <?php
                     break;
@@ -88,7 +117,12 @@ if ($_POST) {
                     ?>
                     <script>
 
-                        alert('Logueado con éxito!');
+                        
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Realizado',
+                            text: 'Iniciando session...!',
+                            })
 
                         setTimeout(function(){
                             location.href="../index.php"
@@ -98,7 +132,22 @@ if ($_POST) {
                     <?php
                 } else {
 
-                    echo "<script>alert('Error... Las contraseñas no coinciden')</script>";
+                     ?>
+                    <script>
+
+                        
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Error',
+                            text: 'Las contraseñas no coinciden!',
+                            })
+
+                        setTimeout(function(){
+                            location.href="../index.php"
+                        } , 1000);  
+
+                    </script>
+                    <?php
 
                 }
             
