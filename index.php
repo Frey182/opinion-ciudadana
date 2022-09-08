@@ -73,7 +73,7 @@ print_r($_SESSION);
                     <div class="media bg-warning p-2 rounded-bottom">
                         <form action="" class="w-100">
                             <div class="input-group mb-1 texto">
-                                <textarea class="form-control texto" row="1" col="50" aria-label="With textarea"></textarea>
+                                <textarea name="descripcion" class="form-control texto" row="1" col="50" aria-label="With textarea"></textarea>
                                     <div class="input-group-append">
                                     <button class="btn btn-outline-success font-weight-bold" type="button" id="button-addon2">Comentar</button>
                                 </div>
