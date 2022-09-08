@@ -41,9 +41,25 @@
                                 <i class="fa-solid fa-user"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
-                                <button class="dropdown-item" type="button">Action</button>
-                                <button class="dropdown-item" type="button">Another action</button>
-                                <button class="dropdown-item" type="button">Something else here</button>
+                                <div class="contedatos d-flex">
+                                    <div class="fondo bg-warning rounded-circle d-flex justify-content-center align-items-center mr-2 ml-2" style="width:50px; height:50px;">
+                                        <h1 class="m-auto text-dark">D</h1>
+                                    </div>
+                                    <div class="text mr-2">
+                                    <h6>Duvan Bolaño</h6>
+                                    <p>Duvan@gmail.com</p>
+                                    </div>
+                                </div>
+                               <div class="conteaccion">
+                                    <div class="d-flex">
+                                        <button class="dropdown-item text-align-left" type="button">Configuracion </button><i class="fa-solid fa-gear text-right mt-2 mr-3"></i>
+                                    </div>
+                                    <div class="d-flex">
+                                        <form action="" method="post" class="d-flex w-100">
+                                        <button class="dropdown-item text-align-left" type="submit" name="enviar" value="logout">Cerrar sesion </button><i class="fa-solid fa-arrow-right-from-bracket  text-right mt-2 mr-3"></i>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="dropdown ml-2">
