@@ -84,6 +84,7 @@
                         <div class="media bg-white p-2 rounded-bottom">
                             <form action="index.php" method="post" class="w-100">
                                 <div class="input-group mb-1 texto">
+                                    <input type="hidden" name="tema" value="<?php echo $tema['id']; ?>">
                                     <textarea name="descripcion" class="form-control texto bg-light" row="1" col="50" aria-label="With textarea"></textarea>
                                     <div class="input-group-append">
                                         <button name="comentar" value="comentar" class="btn btn-outline-warning font-weight-bold" type="submit" id="button-addon2">Comentar</button>
