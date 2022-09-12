@@ -3,11 +3,10 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-09-2022 a las 17:16:07
+-- Tiempo de generación: 12-09-2022 a las 18:25:04
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
-CREATE DATABASE bgoc;
-USE bgoc;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -50,8 +49,16 @@ INSERT INTO `barrio` (`id`, `nombre`, `id_municipio`) VALUES
 CREATE TABLE `comentario` (
   `id` int(11) NOT NULL,
   `descripcion` varchar(280) NOT NULL,
-  `id_usu` int(11) NOT NULL
+  `id_usu` int(11) NOT NULL,
+  `id_tema` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `comentario`
+--
+
+INSERT INTO `comentario` (`id`, `descripcion`, `id_usu`, `id_tema`) VALUES
+(7, 'fdsadfa', 324324523, 9);
 
 -- --------------------------------------------------------
 
@@ -163,7 +170,12 @@ CREATE TABLE `tema` (
 --
 
 INSERT INTO `tema` (`id`, `nombre`, `descripcion`, `imagen`, `fecha`, `fkusuario`) VALUES
-(4, 'Construcción edificio el careverga', '12334dfsdf', 'imagen', '2022/12/Sep', 1003315376);
+(4, 'Construcción edificio el careverga', '12334dfsdf', 'imagen', '2022/12/Sep', 1003315376),
+(5, 'sena', 'XD', 'imagen', '2022/12/Sep', 1003315376),
+(6, 'dsfafd', 'fdsaf', 'imagen', '2022/12/Sep', 1003315376),
+(7, 'nuevo', 'fdsafda', 'imagen', '2022/12/Sep', 1003315376),
+(8, '', 'Frey es Gay', 'imagen', '2022/12/Sep', 1003315376),
+(9, 'Gay Frey', 'si', 'imagen', '2022/12/Sep', 1003315376);
 
 -- --------------------------------------------------------
 
@@ -239,7 +251,6 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `telefono`, `correo`, `contrasenia`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `estrato`, `regimen`, `fkdiscapacidad`, `fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES
-(12423, 'jesu ', 'a', 'culo', 'pepe', '2022-09-12', 1234, 'fdse@gmail.com', '123', 'y87y8hynbj', 'SI', 'SI', 'T.Movil', 1, 'subsidiado', 1, 1, 1, 1, 1, 1, 1, 1),
 (324324523, 'luis ', 'enrique', 'sanchez', 'alvarado', '2022-09-13', 1233453, 'fdsfdse@gmail.com', '123', 'y87y8hynbjgfds', 'SI', 'SI', 'Computador', 1, 'subsidiado', 1, 1, 1, 1, 1, 1, 1, 1),
 (1003315376, 'Frey ', 'Alexander', 'Carreño', 'Usuga', '2022-09-07', 1234567, 'frey@gmail.com', '123', 'micasa', 'SI', 'SI', 'Computador', 1, 'subsidiado', 1, 1, 2, 1, 1, 1, 1, 1);
 
@@ -271,7 +282,8 @@ ALTER TABLE `barrio`
 --
 ALTER TABLE `comentario`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_usu` (`id_usu`);
+  ADD KEY `id_usu` (`id_usu`),
+  ADD KEY `id_tema` (`id_tema`);
 
 --
 -- Indices de la tabla `discapacidad`
@@ -358,7 +370,7 @@ ALTER TABLE `barrio`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `discapacidad`
@@ -394,7 +406,7 @@ ALTER TABLE `sexo`
 -- AUTO_INCREMENT de la tabla `tema`
 --
 ALTER TABLE `tema`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_doc`
@@ -428,7 +440,8 @@ ALTER TABLE `barrio`
 -- Filtros para la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  ADD CONSTRAINT `comentario_ibfk_1` FOREIGN KEY (`id_usu`) REFERENCES `usuario` (`dni`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `comentario_ibfk_1` FOREIGN KEY (`id_usu`) REFERENCES `usuario` (`dni`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `comentario_ibfk_2` FOREIGN KEY (`id_tema`) REFERENCES `tema` (`id`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `tema`
