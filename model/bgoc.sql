@@ -6,7 +6,8 @@
 -- Tiempo de generación: 12-09-2022 a las 17:16:07
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
-
+CREATE DATABASE bgoc;
+USE bgoc;
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";

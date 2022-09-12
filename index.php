@@ -21,7 +21,7 @@
                         <div class="card-body p-3 bg-white">
                             <div class="media-body text-align-center">
                                     <div class="form-group">
-                                        <textarea name="descripcion" class="form-control" placeholder="Escribe tu contenido" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        <textarea name="descripcion" class="form-control bg-light" placeholder="Escribe tu contenido" id="exampleFormControlTextarea1" rows="3"></textarea>
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <button name="enviar" value="publicartema" type="submit" class="btn btn-success">Publicar</button>
@@ -73,7 +73,7 @@
                             <div class="input-group mb-1 texto">
                                 <textarea name="descripcion" class="form-control texto bg-light" row="1" col="50" aria-label="With textarea"></textarea>
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-success font-weight-bold" type="button" id="button-addon2">Comentar</button>
+                                    <button class="btn btn-outline-warning font-weight-bold" type="button" id="button-addon2">Comentar</button>
                                 </div>
                             </div>
                         </div>
