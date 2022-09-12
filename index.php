@@ -7,19 +7,14 @@
             <div class="container h-100">
 
                 <?php if($_SESSION['tipo_usu']=="administrador"){ ?>
-                    <div class="card mb-3">
-                        <div class="card-header d-flex border p-3 rounded shadow-sm bg-warning">
-                            <div class="conteimguser">
-                                <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
-                            </div>
-                            <div class="contenameusu">
-                            <form action="index.php" method="post">
-                                <div class="form-group w-100">
-                                    <input type="text" class="form-control" placeholder="Título" id="text" name="nombre">
-                                </div>
-                            </div>
-                        </div>
+                    <div class="card mb-3 border-secondary">
                         <div class="card-body p-3 bg-white">
+                            <div class="contenameusu">
+                                <form action="index.php" method="post">
+                                    <div class="form-group w-100 bg-light">
+                                        <input type="text" class="form-control bg-light" placeholder="Título" id="text" name="nombre">
+                                    </div>
+                            </div>
                             <div class="media-body text-align-center">
                                     <div class="form-group">
                                         <textarea name="descripcion" class="form-control bg-light" placeholder="Escribe tu contenido" id="exampleFormControlTextarea1" rows="3"></textarea>
