@@ -23,7 +23,7 @@ $discapacidades = $objConexion->consultar($discapacidades);
 $niveles_educativos = "SELECT * FROM `nivel_educativo`";
 $niveles_educativos = $objConexion->consultar($niveles_educativos);
 
-$temas = "SELECT * FROM tema INNER JOIN usuario ON tema.fkusuario = usuario.dni;";
+$temas = "SELECT * FROM tema INNER JOIN usuario ON tema.fkusuario = usuario.dni ORDER BY id DESC;";
 $temas = $objConexion->consultar($temas);
 
 $comentarios = "SELECT * FROM comentario;";
