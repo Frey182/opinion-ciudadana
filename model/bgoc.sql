@@ -1,13 +1,12 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-09-2022 a las 14:41:02
--- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.1.2
-CREATE DATABASE bgoc;
-USE bgoc;
+-- Tiempo de generación: 12-09-2022 a las 17:16:07
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
@@ -153,9 +152,17 @@ CREATE TABLE `tema` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `descripcion` varchar(280) NOT NULL,
-  `fkcomentario` int(11) NOT NULL,
+  `imagen` varchar(50) NOT NULL,
+  `fecha` varchar(11) NOT NULL,
   `fkusuario` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tema`
+--
+
+INSERT INTO `tema` (`id`, `nombre`, `descripcion`, `imagen`, `fecha`, `fkusuario`) VALUES
+(4, 'Construcción edificio el careverga', '12334dfsdf', 'imagen', '2022/12/Sep', 1003315376);
 
 -- --------------------------------------------------------
 
@@ -191,7 +198,8 @@ CREATE TABLE `tipo_usu` (
 --
 
 INSERT INTO `tipo_usu` (`id`, `nombre`) VALUES
-(1, 'usuario');
+(1, 'usuario'),
+(2, 'administrador');
 
 -- --------------------------------------------------------
 
@@ -230,7 +238,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `telefono`, `correo`, `contrasenia`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `estrato`, `regimen`, `fkdiscapacidad`, `fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES
-(1003315376, 'Frey ', 'Alexander', 'Carreño', 'Usuga', '2022-09-07', 1234567, 'frey@gmail.com', '123', 'micasa', 'SI', 'SI', 'Computador', 1, 'subsidiado', 1, 1, 1, 1, 1, 1, 1, 1);
+(12423, 'jesu ', 'a', 'culo', 'pepe', '2022-09-12', 1234, 'fdse@gmail.com', '123', 'y87y8hynbj', 'SI', 'SI', 'T.Movil', 1, 'subsidiado', 1, 1, 1, 1, 1, 1, 1, 1),
+(324324523, 'luis ', 'enrique', 'sanchez', 'alvarado', '2022-09-13', 1233453, 'fdsfdse@gmail.com', '123', 'y87y8hynbjgfds', 'SI', 'SI', 'Computador', 1, 'subsidiado', 1, 1, 1, 1, 1, 1, 1, 1),
+(1003315376, 'Frey ', 'Alexander', 'Carreño', 'Usuga', '2022-09-07', 1234567, 'frey@gmail.com', '123', 'micasa', 'SI', 'SI', 'Computador', 1, 'subsidiado', 1, 1, 2, 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -297,7 +307,6 @@ ALTER TABLE `sexo`
 --
 ALTER TABLE `tema`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `fkcomentario` (`fkcomentario`),
   ADD KEY `fkusuario` (`fkusuario`);
 
 --
@@ -384,7 +393,7 @@ ALTER TABLE `sexo`
 -- AUTO_INCREMENT de la tabla `tema`
 --
 ALTER TABLE `tema`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_doc`
@@ -396,7 +405,7 @@ ALTER TABLE `tipo_doc`
 -- AUTO_INCREMENT de la tabla `tipo_usu`
 --
 ALTER TABLE `tipo_usu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario_discapacidad`
@@ -424,7 +433,6 @@ ALTER TABLE `comentario`
 -- Filtros para la tabla `tema`
 --
 ALTER TABLE `tema`
-  ADD CONSTRAINT `tema_ibfk_1` FOREIGN KEY (`fkcomentario`) REFERENCES `comentario` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `tema_ibfk_2` FOREIGN KEY (`fkusuario`) REFERENCES `usuario` (`dni`) ON UPDATE CASCADE;
 
 --
