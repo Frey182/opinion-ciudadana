@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-09-2022 a las 14:03:24
--- Versión del servidor: 10.4.24-MariaDB
--- Versión de PHP: 8.1.6
+-- Tiempo de generación: 13-09-2022 a las 16:21:58
+-- Versión del servidor: 10.4.22-MariaDB
+-- Versión de PHP: 7.4.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -78,6 +78,42 @@ CREATE TABLE `discapacidad` (
 
 INSERT INTO `discapacidad` (`id`, `nombre`) VALUES
 (1, 'discapacidad1');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `encuesta`
+--
+
+CREATE TABLE `encuesta` (
+  `id` int(255) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `descripcion` varchar(255) NOT NULL,
+  `imagen` varchar(255) NOT NULL,
+  `n_votos` int(100) NOT NULL,
+  `fecha` int(11) NOT NULL,
+  `fkusuario` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `encuesta`
+--
+
+INSERT INTO `encuesta` (`id`, `nombre`, `descripcion`, `imagen`, `n_votos`, `fecha`, `fkusuario`) VALUES
+(1, 'test', 'laladbiausdv', 'imagen', 0, 2022, 1193594292);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `encuesta_usuario`
+--
+
+CREATE TABLE `encuesta_usuario` (
+  `id` int(255) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `id_encuesta` int(11) NOT NULL,
+  `respuestas` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -172,7 +208,9 @@ CREATE TABLE `tema` (
 
 INSERT INTO `tema` (`id`, `nombre`, `descripcion`, `imagen`, `fecha`, `fkusuario`) VALUES
 (10, 'Construcción edificio', '¿Qué piensas?', 'imagen', '2022/13/Sep', 1003315376),
-(11, 'Senasoft', 'Llega a Valledupar', 'imagen', '2022/13/Sep', 1003315376);
+(11, 'Senasoft', 'Llega a Valledupar', 'imagen', '2022/13/Sep', 1003315376),
+(18, 'fdsfds', 'fdsfds', 'imagen', '2022/13/Sep', 1193594292),
+(19, 'Duvan', 'DUVANNNNNNNNNNNNNNNNNNN', 'imagen', '2022/13/Sep', 1193594292);
 
 -- --------------------------------------------------------
 
@@ -250,7 +288,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `telefono`, `correo`, `contrasenia`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `estrato`, `regimen`, `fkdiscapacidad`, `fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES
 (324324523, 'luis ', 'enrique', 'sanchez', 'alvarado', '2022-09-13', 1233453, 'fdsfdse@gmail.com', '123', 'y87y8hynbjgfds', 'SI', 'SI', 'Computador', 1, 'subsidiado', 1, 1, 1, 1, 1, 1, 1, 1),
-(1003315376, 'Frey ', 'Alexander', 'Carreño', 'Usuga', '2022-09-07', 1234567, 'frey@gmail.com', '123', 'micasa', 'SI', 'SI', 'Computador', 1, 'subsidiado', 1, 1, 2, 1, 1, 1, 1, 1);
+(1003315376, 'Frey ', 'Alexander', 'Carreño', 'Usuga', '2022-09-07', 1234567, 'frey@gmail.com', '123', 'micasa', 'SI', 'SI', 'Computador', 1, 'subsidiado', 1, 1, 2, 1, 1, 1, 1, 1),
+(1193594292, 'Duvan ', 'Javid', 'Velasquez', 'Bolaño', '2022-09-16', 3423432, 'Dbolanoo07@gmail.com', '123', 'fdsgfd', 'SI', 'SI', 'Computador', 1, 'subsidiado', 1, 1, 2, 1, 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -287,6 +326,18 @@ ALTER TABLE `comentario`
 -- Indices de la tabla `discapacidad`
 --
 ALTER TABLE `discapacidad`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `encuesta`
+--
+ALTER TABLE `encuesta`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `encuesta_usuario`
+--
+ALTER TABLE `encuesta_usuario`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -377,6 +428,18 @@ ALTER TABLE `discapacidad`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT de la tabla `encuesta`
+--
+ALTER TABLE `encuesta`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `encuesta_usuario`
+--
+ALTER TABLE `encuesta_usuario`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `etnia`
 --
 ALTER TABLE `etnia`
@@ -404,7 +467,7 @@ ALTER TABLE `sexo`
 -- AUTO_INCREMENT de la tabla `tema`
 --
 ALTER TABLE `tema`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_doc`
