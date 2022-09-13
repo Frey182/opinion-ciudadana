@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 12-09-2022 a las 18:25:04
+-- Tiempo de generación: 13-09-2022 a las 14:03:24
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -58,7 +58,8 @@ CREATE TABLE `comentario` (
 --
 
 INSERT INTO `comentario` (`id`, `descripcion`, `id_usu`, `id_tema`) VALUES
-(7, 'fdsadfa', 324324523, 9);
+(10, 'Cuando llega?', 1003315376, 11),
+(11, 'Me parece bien', 1003315376, 10);
 
 -- --------------------------------------------------------
 
@@ -170,12 +171,8 @@ CREATE TABLE `tema` (
 --
 
 INSERT INTO `tema` (`id`, `nombre`, `descripcion`, `imagen`, `fecha`, `fkusuario`) VALUES
-(4, 'Construcción edificio el careverga', '12334dfsdf', 'imagen', '2022/12/Sep', 1003315376),
-(5, 'sena', 'XD', 'imagen', '2022/12/Sep', 1003315376),
-(6, 'dsfafd', 'fdsaf', 'imagen', '2022/12/Sep', 1003315376),
-(7, 'nuevo', 'fdsafda', 'imagen', '2022/12/Sep', 1003315376),
-(8, '', 'Frey es Gay', 'imagen', '2022/12/Sep', 1003315376),
-(9, 'Gay Frey', 'si', 'imagen', '2022/12/Sep', 1003315376);
+(10, 'Construcción edificio', '¿Qué piensas?', 'imagen', '2022/13/Sep', 1003315376),
+(11, 'Senasoft', 'Llega a Valledupar', 'imagen', '2022/13/Sep', 1003315376);
 
 -- --------------------------------------------------------
 
@@ -193,7 +190,8 @@ CREATE TABLE `tipo_doc` (
 --
 
 INSERT INTO `tipo_doc` (`id`, `nombre`) VALUES
-(1, 'documento1');
+(1, 'documento1'),
+(2, 'documento2');
 
 -- --------------------------------------------------------
 
@@ -370,7 +368,7 @@ ALTER TABLE `barrio`
 -- AUTO_INCREMENT de la tabla `comentario`
 --
 ALTER TABLE `comentario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `discapacidad`
@@ -406,13 +404,13 @@ ALTER TABLE `sexo`
 -- AUTO_INCREMENT de la tabla `tema`
 --
 ALTER TABLE `tema`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_doc`
 --
 ALTER TABLE `tipo_doc`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `tipo_usu`
@@ -441,7 +439,7 @@ ALTER TABLE `barrio`
 --
 ALTER TABLE `comentario`
   ADD CONSTRAINT `comentario_ibfk_1` FOREIGN KEY (`id_usu`) REFERENCES `usuario` (`dni`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `comentario_ibfk_2` FOREIGN KEY (`id_tema`) REFERENCES `tema` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `comentario_ibfk_2` FOREIGN KEY (`id`) REFERENCES `tema` (`id`);
 
 --
 -- Filtros para la tabla `tema`
