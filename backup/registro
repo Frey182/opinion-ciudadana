@@ -1,241 +1,107 @@
-                                <!-- Slider 1 del registro -->
-                                <div class="slider1">
-                                    <div class="row">
-                                        <div class="col col-md-8">
-                                            <h4>IDENTIFICACION</h4>
-                                            <div class="form-group d-flex">
-                                                <select class="form-control w-25 mr-3" id="exampleFormControlSelect1" name="tipo_doc">
-                                                    <option disable>Tipo doc</option>
-                                                    <option>Cedula de ciudadania</option>
-                                                    <option>Tarjeta de identidad</option>
-                                                    <option>Cedula de extranjeria</option>
-                                                </select>
-                                                <input type="number" class="form-control w-75" placeholder="Ingresa tu numero de identificacion..." id="dni" name="dni">
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Primer y segundo nombre</span>
-                                                </div>
-                                                    <input type="text" aria-label="First name" class="form-control" name="p_nombre">
-                                                    <input type="text" aria-label="Last name" class="form-control" name="s_nombre">
-                                            </div>
-                                        
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Primer y segundo apellido</span>
-                                                </div>
-                                                    <input type="text" aria-label="First name" class="form-control" name="apellido_p">
-                                                    <input type="text" aria-label="Last name" class="form-control" name="apellido_m">
-                                            </div>
-                                            <div class="form-group d-flex">
-                                                <select class="form-control w-25" name="sexo">
-                                                    <option disable>Sexo</option>
-                                                    <option>Masculino</opton>
-                                                    <option>Femenino</option>
-                                                    <option>Otro</option>
-                                                </select>
-                                            </div>
-                                            <h4>CONTACTO</h4>
-                                            <div class="form-group d-flex">
-                                                <input type="number" class="form-control w-25 mr-3" placeholder="Telefono celular" id="telefono" name="telefono">
-                                                <input type="email" class="form-control w-75" placeholder="Correo" id="correo" name="correo">
-                                            </div>  
-                                            <div class="paginacion" style="text-aling:center; font-weight:bold;">
-                                                <p>1 de 3</p>
-                                            </div>
-                                        </div>
-                                            <div class="col col-md-4">
-                                                <div class="contelogo mt-5 ">
-                                                    <img src="img/logogobierno.png" style="width:200px; height:200px;" alt="">
-                                                </div>
-                                                <div class="contebuton">
-                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button>
-                                                </div>
-                                                    <a href="">¿Ya tienes cuenta?</a>
-                                            </div>  
-                                    </div>
-                                </div>
-
-
-
-                                <!-- Slider 2 del registro -->
-                                <div class="slider2">
-                                    <div class="row">
-                                        <div class="col col-md-8">
-                                            <h4>GEOGRAFICAS</h4>
-                                            <div class="form-group d-flex">
-                                                <input type="text" class="form-control w-50 mr-3" placeholder="Municipio" id="municipio" name="municipio">
-                                                <input type="text" class="form-control w-50" placeholder="Barrio/Vereda" id="barrio" name="barrio">
-                                            </div> 
-                                            <div class="form-group">
-                                                <input type="text" class="form-control w-100" placeholder="Direccion" id="direccion" name="direccion">
-                                            </div> 
-                                            <h4>ENFOQUE DIFERENCIAL</h4>
-                                            <div class="form-group d-flex">
-                                                <input type="date" class="form-control w-75" placeholder="Fecha de nacimiento" id="f_nacimiento" name="f_nacimiento">
-                                                <select class="form-control w-25 mr-3" id="exampleFormControlSelect1" name="tipo_doc">
-                                                    <option disable>Etnia</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                </select>
-                                            </div>
-                                            <h4>ENFOQUE POBLACIONAL</h4>
-                                            <div class="form-group">
-                                                <select class="form-control w-100" id="exampleFormControlSelect1" name="tipo_doc">
-                                                    <option disable>Condicion de discapacidad</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                </select>
-                                            </div>
-                                            <h4>SOCIOECONOMICO</h4>
-                                            <div class="form-group">
-                                                <select class="form-control w-100" id="exampleFormControlSelect1" name="tipo_doc">
-                                                    <option disable>Condicion de discapacidad</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                </select>
-                                            </div>
-                                            <div class="paginacion" style="text-aling:center; font-weight:bold;">
-                                                <p>2 de 3</p>
-                                            </div>
-                                         </div>
-                                            <div class="col col-md-4">
-                                                <div class="contelogo mt-5 ">
-                                                    <img src="img/logogobierno.png" style="width:200px; height:200px;" alt="">
-                                                </div>
-                                                <div class="contebuton">
-                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4">Siguiente</button>
-                                                </div>
-                                                    <a href="">¿Ya tienes cuenta?</a>
-                                            </div>  
-                                    </div>
-                                </div>
+ <!-- PARA PUBLICACIONES -->
+ <?php foreach ($temas as $tema) { ?>
+    <div class="card mb-3">
+        <div class="card-header d-flex border p-3 rounded shadow-sm bg-warning">
+            <div class="conteimguser">
+                <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
+            </div>
+            <div class="contenameusu">
+                <h4><?php echo $tema['nombre']; ?> <small><i>Publicado <?php echo $tema['fecha']; ?></i></small></h4>
+                <p>por "<?php echo $tema['correo']; ?>"</p>
+            </div>
+        </div>
+        <div class="card-body p-3 bg-white">
+            
+            <div class="media-body text-align-center">
+                <p><?php echo $tema['descripcion']; ?></p>
+                <img src="" alt="" class="" style="">
+            </div>
+        </div>
+    <?php foreach ($comentarios as $comentario) { ?>
+        <div class="card-footer text-muted">
+            <div class="media border p-3 bg-light">
+                <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
+                <div class="media-body">
+                    <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+                    <p><?php echo $comentario['descripcion']; ?></p>
+                    <div class="media p-3">
+                    <img src="view/img/logogobierno.png" alt="Jane Doe" class="mr-3 mt-1 rounded-circle" style="width:45px;">
+                    <div class="media-body">
+                        <h4>Jane Doe <small><i>Posted on February 20 2016</i></small></h4>
+                        <p>Lorem ipsum...</p>
+                    </div>
+                    </div> 
+                </div>
+            </div>   
+        </div>
+    <?php } ?>
+        <div class="media bg-white p-2 rounded-bottom">
+            <form action="index.php" method="post" class="w-100">
+                <div class="input-group mb-1 texto">
+                    <input type="hidden" name="tema" value="<?php echo $tema['id']; ?>">
+                    <textarea name="descripcion" class="form-control texto bg-light" row="1" col="50" aria-label="With textarea"></textarea>
+                    <div class="input-group-append">
+                        <button name="comentar" value="comentar" class="btn btn-outline-warning font-weight-bold" type="submit" id="button-addon2">Comentar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div> 
+<?php } ?>
 
 
 
 
 
 
-                                <!-- Slider 3 del formulario -->
-                                <div class="slider3">
-                                    <div class="row">
-                                        <div class="col col-md-8">
-                                            <h4>ESCOLARIDAD</h4>
-                                            <div class="form-group d-flex">
-                                                <select class="form-control w-100 mr-3" id="exampleFormControlSelect1" name="nvledu">
-                                                    <option disable>Ultimo nivel educativo alcanzado</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                    <option>...</option>
-                                                </select>
-                                            </div>
-                                            
-                                           <div class="contepreguntaform border mb-3 p-3">
-                                                <h6>¿Cuenta con acceso a dispositivos tecnologicos?</h6>
-                                                <div class="conteradio d-flex justify-content-center ">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                        <label class="form-check-label mr-5" for="exampleRadios1">
-                                                            SI
-                                                        </label>
-                                                    </div> 
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                        <label class="form-check-label" for="exampleRadios2">
-                                                            NO
-                                                        </label>
-                                                    </div> 
-                                                </div>
-                                           </div>
-                                           <div class="contepreguntaform border mb-3 p-3">
-                                                <h6>Si la respuesta anterior es SI, ¿Cual o cuales?</h6>
-                                                <div class="conteradio d-flex justify-content-around ">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                        <label class="form-check-label" for="defaultCheck1">
-                                                            T.Movil
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                        <label class="form-check-label" for="defaultCheck1">
-                                                            Computador
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-                                                        <label class="form-check-label" for="defaultCheck1">
-                                                            Tablet
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="form-control w-75 m-auto" placeholder="¿Otro?, ¿Cual?" id="telefono" name="">
-                                           </div>
-                                           <div class="contepreguntaform border mb-3 p-3">
-                                                <h6>¿Cuenta con conectividad a internet?</h6>
-                                                <div class="conteradio d-flex justify-content-center ">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                        <label class="form-check-label mr-5" for="exampleRadios1">
-                                                            SI
-                                                        </label>
-                                                    </div> 
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                        <label class="form-check-label" for="exampleRadios2">
-                                                            NO
-                                                        </label>
-                                                    </div> 
-                                                </div>
-                                           </div>
-                                            <div class="paginacion" style="text-aling:center; font-weight:bold;">
-                                                <p>3 de 3</p>
-                                            </div>
-                                        </div>
-                                            <div class="col col-md-4">
-                                                <h4>SALUD</h4>
-                                                <div class="contepreguntaform border mb-1 p-3">
-                                                    <h6>Tipo de regimen de afiliacion</h6>
-                                                    <div class="conteradio d-flex justify-content-center ">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                            <label class="form-check-label mr-5" for="exampleRadios1">
-                                                                Subsidiado
-                                                            </label>
-                                                        </div> 
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                            <label class="form-check-label" for="exampleRadios2">
-                                                                Contributivo
-                                                            </label>
-                                                        </div> 
-                                                    </div>
-                                                </div>
-                                                <div class="contelogo mt-3 ">
-                                                    <img src="img/logogobierno.png" style="width:200px; height:200px;" alt="">
-                                                </div>
-                                                <div class="contebuton">
-                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4">Iniciar sesion</button>
-                                                </div>
-                                                    <a href="">¿Ya tienes cuenta?</a>
-                                            </div>  
-                                    </div>
-                                </div>
+
+ <!-- PARA ENCUESTAS -->
+ <?php foreach ($temas as $tema) { ?>
+    <div class="card mb-3">
+         <div class="card-header d-flex border p-3 rounded shadow-sm bg-warning">
+             <div class="conteimguser">
+                 <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
+             </div>
+             <div class="contenameusu">
+                 <h4><?php echo $tema['nombre']; ?> <small><i>Publicado <?php echo $tema['fecha']; ?></i></small></h4>
+                 <p>por "<?php echo $tema['correo']; ?>"</p>
+             </div>
+         </div>
+         <div class="card-body p-3 bg-white">
+             
+             <div class="media-body text-align-center">
+                 <p><?php echo $tema['descripcion']; ?></p>
+                 <img src="" alt="" class="" style="">
+             </div>
+         </div>
+    
+         <div class="card-footer text-muted">
+             <div class="media border p-3 bg-light">
+                     <form action="">
+                         <div class="form-check">
+                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                             <label class="form-check-label" for="exampleRadios1">
+                                SI
+                             </label>
+                             </div>
+                             <div class="form-check">
+                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                             <label class="form-check-label" for="exampleRadios2">
+                                NO
+                             </label>
+                             </div>
+                             <div class="form-check ">
+                             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                             <label class="form-check-label" for="exampleRadios3">
+                                Tal ves
+                             </label>
+                         </div>
+              </div>
+                         <div class="conteboton d-flex justify-content-center mt-3">
+                             <button type="submit" class="btn btn-warning">Responder</button>
+                         </div>
+                     </form>
+                
+         </div>
+    </div> 
+ <?php } ?>
