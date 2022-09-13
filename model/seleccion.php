@@ -29,6 +29,7 @@ $temas = $objConexion->consultar($temas);
 $comentarios = "SELECT * FROM comentario;";
 $comentarios = $objConexion->consultar($comentarios);
 
+<<<<<<< HEAD
 /* 
 SELECT 
 tema.id AS tema_id, 
@@ -46,4 +47,24 @@ comentario.id_usu AS comentario_idusu
 FROM tema INNER JOIN usuario ON tema.fkusuario = usuario.dni INNER JOIN comentario ON comentario.id_usu = usuario.dni ORDER BY tema.id DESC;
 */
 
+=======
+?>
+
+<?php
+
+if ($_POST){
+
+if (isset($_POST['Para'])){
+$publico=$_POST['publico'];
+$edad=$_POST['edad'];
+$municipio=$_POST['municipio'];
+$barrio=$_POST['barrio'];
+$etnia=$_POST['etnia'];
+$discapacidad=$_POST['discapacidad'];
+$estrato=$_POST['estrato'];
+$nvledu=$_POST['nvledu'];
+$regimen=$_POST['regimen'];
+}
+}
+>>>>>>> 033f8afb96544aedd57c83541c7519f82ff4502a
 ?>
