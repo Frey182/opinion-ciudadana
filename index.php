@@ -20,16 +20,28 @@
                                         <textarea name="descripcion" class="form-control bg-light" placeholder="Escribe tu contenido" id="exampleFormControlTextarea1" rows="3"></textarea>
                                     </div>
                                     <div class="d-flex float-right">
-                                         <div class="dropdown mr-2 my-2 my-lg-2">
-                                            <button class="btn dropdown-toggle bg-light border-secondary" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                <i class="fa-solid fa-users"> Publico</i>
-                                            </button>
-                                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
-                                                <button class="dropdown-item" type="button">Action</button>
-                                                <button class="dropdown-item" type="button">Another action</button>
-                                                <button class="dropdown-item" type="button">Something else here</button>
+                                        <form action="">
+                                            <div class="form-group mr-2 my-2 my-lg-2">
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                <option>Tipo de publicacion</option>
+                                                <option>Encuesta</option>
+                                                <option>Votacion</option>
+                                                <option>Opinion</option>
+                                                <option>5</option>
+                                                </select>
                                             </div>
-                                        </div>
+                                            <div class="form-group mr-2 my-2 my-lg-2">
+                                                <select class="form-control" id="exampleFormControlSelect1">
+                                                <!-- <i class="fa-solid fa-users"> Publico</i> -->
+                                                <option>Publico</option>
+                                                <option>Hombres</option>
+                                                <option>Mujeres</option>
+                                                <option>14 - 19 años</option>
+                                                <option>5</option>
+                                                </select>
+                                                
+                                            </div>
+                                        </form>
                                         <button class="btn btn-light border-secondary rounded-circle mr-2" style="height: 50px; width: 50px;"><i class="fa-regular fa-image"></i></button>
                                         <button name="enviar" value="publicartema" type="submit" class="btn btn-success rounded-circle" style="height: 50px; width: 50px;"><i class="fa-solid fa-arrow-up-from-bracket" ></i></button>
                                        
@@ -48,7 +60,7 @@
                             </div>
                             <div class="contenameusu">
                                 <h4><?php echo $tema['nombre']; ?> <small><i>Publicado <?php echo $tema['fecha']; ?></i></small></h4>
-                                <p><?php echo $tema['correo']; ?></p>
+                                <p>por "<?php echo $tema['correo']; ?>"</p>
                             </div>
                         </div>
                         <div class="card-body p-3 bg-white">
