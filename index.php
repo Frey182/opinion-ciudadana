@@ -29,6 +29,28 @@ if (empty($_SESSION)) {
                             <div class="media-body text-align-center">
                                     <div class="form-group">
                                         <textarea name="descripcion" class="form-control bg-light" placeholder="Escribe tu contenido" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+                                    <div class="mt-3 border bg-light p-3 rounded d-none" id="radios">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                            <label class="form-check-label" for="exampleRadios1">
+                                                SI
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                            <label class="form-check-label" for="exampleRadios2">
+                                                NO
+                                            </label>
+                                        </div>
+                                        <div class="form-check ">
+                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                                            <label class="form-check-label" for="exampleRadios3">
+                                                Tal vez
+                                            </label>
+                                        </div>
+                                    </div>
+
                                     </div>
                                     <div class="d-flex float-right">
                                         <!-- Button trigger modal -->
@@ -148,10 +170,10 @@ if (empty($_SESSION)) {
                                                 </div>
                                             </div>
                                             <div class="form-group mr-2 my-2 my-lg-2">
-                                                <select class="form-control" id="exampleFormControlSelect1" name="tipo_publi">
-                                                <option disable>Tipo de publicacion</option>
-                                                <option value="encuesta">Encuesta</option>
-                                                <option value="publicacion">Publicacion</option>
+                                                <select class="form-control" id="tipo_publi" onchange="cambiarTipoPubli()" name="tipo_publi">
+                                                    <option disable>Tipo de publicacion</option>
+                                                    <option value="encuesta">Encuesta</option>
+                                                    <option value="publicacion">Publicacion</option>
                                                 </select>
                                             </div>
                                         <button class="btn btn-light border-secondary rounded-circle mr-2" style="height: 50px; width: 50px;"><i class="fa-regular fa-image"></i></button>
@@ -273,4 +295,4 @@ if (empty($_SESSION)) {
             </div>
         </div>
 <?php include "view/footer.php"?>
-<script src="view/js/comentarios.js"></script>
+<script src="view/js/encuesta.js"></script>
