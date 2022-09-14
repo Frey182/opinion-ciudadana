@@ -1,4 +1,14 @@
-<?php session_start();?>
+<?php 
+
+session_start();
+
+if (empty($_SESSION)) {
+
+    header('location: view/login.php');
+
+}
+
+?>
 <?php include "view/header.php"?>
 <?php include "model/seleccion.php"?>
 <?php include "controller/publicar.php"?>
@@ -156,8 +166,8 @@
                 <?php } ?>
                 <!-- PARA PUBLICACIONES -->
                 <?php foreach ($temas as $tema) { ?>
-                    <div class="card mb-3">
-                        <div class="publicacion" id="<?php echo $tema['id']; ?>">
+                    <div class="card mb-3 publicacion" id="<?php echo $tema['id']; ?>">
+                        <div>
                             <div class="card-header d-flex border p-3 rounded shadow-sm bg-warning">
                                 <div class="conteimguser">
                                     <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
@@ -175,22 +185,27 @@
                                 </div>
                             </div>
                             <div class="card-footer text-muted">
+                                
                                 <?php foreach ($comentarios as $comentario) { ?>
-                                    <div class="media border p-3 bg-light comentario" id="<?php echo $comentario['id'] ?>">
-                                        <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
-                                        <div class="media-body">
-                                            <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
-                                            <p><?php echo $comentario['descripcion']; ?></p>
-                                            <div class="media p-3">
-                                            <img src="view/img/logogobierno.png" alt="Jane Doe" class="mr-3 mt-1 rounded-circle" style="width:45px;">
+                                    <?php if ($comentario['id_tema'] == $tema['id']) { ?>
+
+                                        <div class="media border p-3 bg-light comentario" id="<?php echo $comentario['id_tema']; ?>">
+                                            <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
                                             <div class="media-body">
-                                                <h4>Jane Doe <small><i>Posted on February 20 2016</i></small></h4>
-                                                <p>Lorem ipsum...</p>
+                                                <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+                                                <p><?php echo $comentario['descripcion']; ?></p>
+                                                <div class="media p-3">
+                                                <img src="view/img/logogobierno.png" alt="Jane Doe" class="mr-3 mt-1 rounded-circle" style="width:45px;">
+                                                <div class="media-body">
+                                                    <h4>Jane Doe <small><i>Posted on February 20 2016</i></small></h4>
+                                                    <p>Lorem ipsum...</p>
+                                                </div>
+                                                </div> 
                                             </div>
-                                            </div> 
-                                        </div>
-                                    </div>   
+                                        </div>   
+                                    <?php } ?>
                                 <?php } ?>
+
                             </div>
                             <div class="media bg-white p-2 rounded-bottom">
                                 <form action="index.php" method="post" class="w-100">
