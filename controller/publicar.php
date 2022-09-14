@@ -37,7 +37,7 @@ if ($_POST) {
                 <?php
                 break;
                 case 'encuesta':
-                    $sql = "INSERT INTO `encuesta` (`id`, `nombre`, `descripcion`, `imagen`, `n_votos`, `fecha`, `fkusuario`) VALUES (NULL, '$nombre', '$descripcion', 'imagen', '0', '$fecha', '$dni')";
+                    $sql = "INSERT INTO `encuesta` (`id`, `nombre`, `descripcion`, `imagen`, `fecha`, `fkusuario`) VALUES (NULL, '$nombre', '$descripcion', 'imagen', '$fecha', '$dni')";
                     // llamamos al método ejecutar de conexion
                     $objConexion->ejecutar($sql);
                     ?>
