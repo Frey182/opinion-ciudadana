@@ -19,8 +19,9 @@ if (empty($_SESSION)) {
                 <?php if($_SESSION['tipo_usu']=="administrador"){ ?>
                     <div class="card mb-3 border-secondary">
                         <div class="card-body p-3 bg-white">
+                        <form action="index.php" method="post">    
                             <div class="contenameusu">
-                                <form action="index.php" method="post">
+                               
                                     <div class="form-group w-100 bg-light">
                                         <input type="text" class="form-control bg-light" placeholder="Título" id="text" name="nombre">
                                     </div>
@@ -38,7 +39,7 @@ if (empty($_SESSION)) {
                                             <!-- Modal -->
                                             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                 <div class="modal-dialog modal-dialog-centered" role="document">
-                                                   <form action="">
+                                                  <!--  <form action=""> -->
                                                         <div class="modal-content">
                                                             <div class="modal-header">
                                                                 <h5 class="modal-title" id="exampleModalLongTitle">Elige para que publico sera tu publicacion</h5>
@@ -143,7 +144,7 @@ if (empty($_SESSION)) {
                                                                 <button type="submit" class="btn btn-warning" name="Para">Aceptar</button>
                                                             </div>
                                                         </div>
-                                                   </form>
+                                                  <!--  </form> -->
                                                 </div>
                                             </div>
                                             <div class="form-group mr-2 my-2 my-lg-2">
