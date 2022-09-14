@@ -8,7 +8,9 @@ if ($_POST) {
         $nombre = $_POST['nombre'];
         $descripcion = $_POST['descripcion'];
         $dni = $_SESSION['dni'];
-
+        $opcion1 = $_POST['opcion1'];
+        $opcion2 = $_POST['opcion2'];
+        $opcion3 = $_POST['opcion3'];
         date_default_timezone_set('America/Bogota');
         $fecha = date('Y/j/M');
 
@@ -37,7 +39,7 @@ if ($_POST) {
                 <?php
                 break;
                 case 'encuesta':
-                    $sql = "INSERT INTO `encuesta` (`id`, `nombre`, `descripcion`, `imagen`, `fecha`, `fkusuario`) VALUES (NULL, '$nombre', '$descripcion', 'imagen', '$fecha', '$dni')";
+                    $sql = "INSERT INTO `encuesta` (`id`, `nombre`, `descripcion`, `imagen`, `fecha`, `opcion1`, `opcion2`, `opcion3`, `fkusuario`) VALUES (NULL, '$nombre', '$descripcion', 'imagen', '$fecha', '$opcion1', '$opcion2', '$opcion3', '$dni')";
                     // llamamos al método ejecutar de conexion
                     $objConexion->ejecutar($sql);
                     ?>
