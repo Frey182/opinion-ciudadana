@@ -151,8 +151,6 @@ if (empty($_SESSION)) {
                                                 <select class="form-control" id="exampleFormControlSelect1" name="tipo_publi">
                                                 <option disable>Tipo de publicacion</option>
                                                 <option value="encuesta">Encuesta</option>
-                                                <option>Votacion</option>
-                                                <option>Opinion</option>
                                                 <option value="publicacion">Publicacion</option>
                                                 </select>
                                             </div>
