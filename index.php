@@ -222,6 +222,56 @@ if (empty($_SESSION)) {
                         </div>
                     </div> 
                 <?php } ?>
+                <!-- PARA ENCUESTAS -->
+            <?php foreach ($encuestas as $encuesta) { ?>
+                <div class="card mb-3">
+                    <div class="card-header d-flex border p-3 rounded shadow-sm bg-warning">
+                        <div class="conteimguser">
+                            <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
+                        </div>
+                        <div class="contenameusu">
+                            <h4><?php echo $encuesta['nombre']; ?> <small><i>Publicado <?php echo $encuesta['fecha']; ?></i></small></h4>
+                            <p>por "<?php echo $encuesta['correo']; ?>"</p>
+                        </div>
+                    </div>
+                    <div class="card-body p-3 bg-white">
+                        
+                        <div class="media-body text-align-center">
+                            <p><?php echo $encuesta['descripcion']; ?></p>
+                            <img src="" alt="" class="" style="">
+                        </div>
+                    </div>
+                
+                    <div class="card-footer text-muted">
+                        <div class="media border p-3 bg-light">
+                                <form action="">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                        <label class="form-check-label" for="exampleRadios1">
+                                            SI
+                                        </label>
+                                        </div>
+                                        <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                        <label class="form-check-label" for="exampleRadios2">
+                                            NO
+                                        </label>
+                                        </div>
+                                        <div class="form-check ">
+                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                                        <label class="form-check-label" for="exampleRadios3">
+                                            Tal ves
+                                        </label>
+                                    </div>
+                        </div>
+                                    <div class="conteboton d-flex justify-content-center mt-3">
+                                        <button type="submit" class="btn btn-warning">Responder</button>
+                                    </div>
+                                </form>
+                            
+                    </div>
+                </div> 
+            <?php } ?>
             </div>
         </div>
 <?php include "view/footer.php"?>
