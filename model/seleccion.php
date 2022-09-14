@@ -29,6 +29,9 @@ $temas = $objConexion->consultar($temas);
 $comentarios = "SELECT * FROM comentario;";
 $comentarios = $objConexion->consultar($comentarios);
 
+$encuestas = "SELECT * FROM encuesta INNER JOIN usuario ON encuesta.fkusuario = usuario.dni ORDER BY id DESC;;";
+$encuestas = $objConexion->consultar($encuestas);
+
 /* 
 SELECT 
 tema.id AS tema_id, 
