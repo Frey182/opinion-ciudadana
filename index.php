@@ -31,23 +31,30 @@ if (empty($_SESSION)) {
                                         <textarea name="descripcion" class="form-control bg-light" placeholder="Escribe tu contenido" id="exampleFormControlTextarea1" rows="3"></textarea>
 
                                     <div class="mt-3 border bg-light p-3 rounded d-none" id="radios">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                            <label class="form-check-label" for="exampleRadios1">
-                                                SI
-                                            </label>
+                                        <p>Escriba las respuestas</p>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                <input type="radio" aria-label="Radio button for following text input">
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="Text input with radio button" name="opcion1">
                                         </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                            <label class="form-check-label" for="exampleRadios2">
-                                                NO
-                                            </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                <input type="radio" aria-label="Radio button for following text input">
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="Text input with radio button" name="opcion2">
                                         </div>
-                                        <div class="form-check ">
-                                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                                            <label class="form-check-label" for="exampleRadios3">
-                                                Tal vez
-                                            </label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <div class="input-group-text">
+                                                <input type="radio" aria-label="Radio button for following text input">
+                                                </div>
+                                            </div>
+                                            <input type="text" class="form-control" aria-label="Text input with radio button" name="opcion3">
                                         </div>
                                     </div>
 
@@ -268,19 +275,19 @@ if (empty($_SESSION)) {
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                                         <label class="form-check-label" for="exampleRadios1">
-                                            SI
+                                           <?php echo $encuesta['opcion1'];?>
                                         </label>
                                         </div>
                                         <div class="form-check">
                                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
                                         <label class="form-check-label" for="exampleRadios2">
-                                            NO
+                                            <?php echo $encuesta['opcion2'];?>
                                         </label>
                                         </div>
                                         <div class="form-check ">
                                         <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
                                         <label class="form-check-label" for="exampleRadios3">
-                                            Tal ves
+                                            <?php echo $encuesta['opcion3'];?>
                                         </label>
                                     </div>
                         </div>
