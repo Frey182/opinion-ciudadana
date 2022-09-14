@@ -3,9 +3,10 @@
 class conexion{
 
     // declaramos las variables para usarlas en PDO
-    public $host = "localhost";
-    public $usuario = "root";
-    public $contraseña = "";
+    // la base de datos está subida en clevercloud
+    public $host = "bdo1moijq0exi9zpt4nv-mysql.services.clever-cloud.com";
+    public $usuario = "uwurad3fqgwyiryc";
+    public $contraseña = "eRMmhhU8Riovr3LMl0Gk";
     public $conexion;
 
     // creamos el método construct...
@@ -14,7 +15,7 @@ class conexion{
         // el cual guarda la conexión en $this->conexion
         try {
 
-            $this->conexion = new PDO("mysql:host=$this->host;dbname=bgoc", $this->usuario, $this->contraseña);
+            $this->conexion = new PDO("mysql:host=$this->host;dbname=bdo1moijq0exi9zpt4nv", $this->usuario, $this->contraseña);
             $this->conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         // en caso de algún error al conectar nos mostrará el siguiente mensaje
