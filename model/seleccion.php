@@ -26,6 +26,9 @@ $niveles_educativos = $objConexion->consultar($niveles_educativos);
 $comentarios = "SELECT * FROM comentario;";
 $comentarios = $objConexion->consultar($comentarios);
 
+$temas = "SELECT * FROM tema INNER JOIN usuario ON tema.fkusuario = usuario.dni";
+$temas = $objConexion->consultar($temas);
+
 $opcion_encuestas = "SELECT * FROM opcion_encuesta;";
 $opcion_encuestas = $objConexion->consultar($opcion_encuestas);
 
