@@ -57,7 +57,21 @@ if ($_POST) {
                     session_start();
 
                     // almacenamos los datos del usuario en la variable
-                    $_SESSION = array("nombre"=>$p_nombre. " ".  $s_nombre. " ". $apellido_p . " ". $apellido_m,  "correo"=>$correo, "tipo_usu"=>"usuario");
+                    $_SESSION = array(
+                        "nombre"=>$p_nombre. " ".  $s_nombre. " ". $apellido_p . " ". $apellido_m,  
+                        "correo"=>$correo, 
+                        "tipo_doc"=>$fktipo_doc,
+                        "tipo_usu"=>"usuario",
+                        "fketnia"=>$fketnia,
+                        "fksexo"=>$fksexo,
+                        "fknvledu"=>$fknvledu,
+                        "fkbarrio"=>$fkbarrio,
+                        "fkmunicipio"=>$fkmunicipio,
+                        "edad"=>$annos->y,
+                        "estrato"=>$estrato,
+                        "regimen"=>$regimen,
+                        "discapacidad"=>$discapacidad
+                    );
                     
                     ?>
                     <script>
@@ -101,6 +115,20 @@ if ($_POST) {
                 $sql = "SELECT * FROM usuario u JOIN tipo_usu t ON u.fktipo_usu = t.id WHERE dni=$dni";
                 $resultado = $objConexion->consultar($sql);
 
+                $comparacion = "SELECT 
+                usuario.regimen AS usario_regimen,
+                usuario.edad  AS usuario_edad,
+                usuario.estrato AS usuario_estrato,
+                etnia.nombre AS etnia_nombre,
+                municipio.nombre AS municipio_nombre,
+                nivel_educativo.nombre AS nivel_educativo_nombre,
+                sexo.nombre AS sexo_nombre,
+                discapacidad.nombre AS discapacidad_nombre,
+                barrio.nombre AS barrio_nombre
+                FROM usuario, tipo_doc, etnia, municipio, nivel_educativo, sexo, discapacidad, barrio WHERE usuario.dni = $dni";
+
+                $comparacion = $objConexion->consultar($comparacion);
+
                 // si la contraseña y tipo de documento SÍ pertenecen al usuario consultado
                 if (($contrasenia == $resultado[0]['contrasenia']) && ($fktipo_doc == $resultado[0]['fktipo_doc'])) {
 
@@ -108,7 +136,22 @@ if ($_POST) {
                     session_start();
 
                     // almacenamos los datos del usuario en la variable
-                    $_SESSION = array("dni"=>$resultado[0]['dni'], "nombre"=>$resultado[0]['p_nombre']. " ". $resultado[0]['s_nombre']. " ". $resultado[0]['apellido_p'] . " ". $resultado[0]['apellido_m'], "correo"=>$resultado[0]['correo'], "tipo_usu"=>$resultado[0]['nombre']);
+                    $_SESSION = array(
+                        "dni"=>$resultado[0]['dni'], 
+                        "nombre"=>$resultado[0]['p_nombre']. " ". $resultado[0]['s_nombre']. " ". $resultado[0]['apellido_p'] . " ". $resultado[0]['apellido_m'], 
+                        "correo"=>$resultado[0]['correo'], 
+                        "tipo_doc"=>$resultado[0]['fktipo_doc'],
+                        "tipo_usu"=>$resultado[0]['nombre'],
+                        "etnia"=>$comparacion[0]['etnia_nombre'],
+                        "fksexo"=>$comparacion[0]['sexo_nombre'],
+                        "nivel_edu"=>$comparacion[0]['nivel_educativo_nombre'],
+                        "barrio"=>$comparacion[0]['barrio_nombre'],
+                        "municipio"=>$comparacion[0]['municipio_nombre'],
+                        "discapacidad"=>$comparacion[0]['discapacidad_nombre'],
+                        "regimen"=>$comparacion[0]["usario_regimen"],
+                        "estrato"=>$comparacion[0]["usuario_estrato"],
+                        "edad"=>$comparacion[0]["usuario_edad"]
+                    );
 
                     ?>
                     <script>
