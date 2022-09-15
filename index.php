@@ -247,35 +247,35 @@ if (empty($_SESSION)) {
                                 </div>
                             <?php } else if ($tema['tipo_tema'] == "encuesta") {?>
                                 <?php foreach ($opcion_encuestas as $opcion_encuesta) { ?>
-                                
-                                    <div class="card-footer text-muted">
-                                        <div class="media border p-3 bg-light">
-                                            <form action="">
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-                                                    <label class="form-check-label" for="exampleRadios1">
-                                                        <?php echo $opcion_encuesta['opcion1'];?>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
-                                                    <label class="form-check-label" for="exampleRadios2">
-                                                        <?php echo $opcion_encuesta['opcion2'];?>
-                                                    </label>
-                                                </div>
-                                                <div class="form-check ">
-                                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
-                                                    <label class="form-check-label" for="exampleRadios3">
-                                                        <?php echo $opcion_encuesta['opcion3'];?>
-                                                    </label>
-                                                </div>
-                                            </form>
+                                    <?php if ($opcion_encuesta['tema_id'] == $tema['id']) { ?>
+                                        <div class="card-footer text-muted">
+                                            <div class="media border p-3 bg-light">
+                                                <form action="">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                        <label class="form-check-label" for="exampleRadios1">
+                                                            <?php echo $opcion_encuesta['opcion1'];?>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                        <label class="form-check-label" for="exampleRadios2">
+                                                            <?php echo $opcion_encuesta['opcion2'];?>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check ">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                                                        <label class="form-check-label" for="exampleRadios3">
+                                                            <?php echo $opcion_encuesta['opcion3'];?>
+                                                        </label>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="conteboton d-flex justify-content-center mt-3">
+                                                <button type="submit" class="btn btn-warning">Responder</button>
+                                            </div>
                                         </div>
-                                        <div class="conteboton d-flex justify-content-center mt-3">
-                                            <button type="submit" class="btn btn-warning">Responder</button>
-                                        </div>
-                                    </div>
-                                
+                                    <?php } ?>    
                                 <?php } ?>
                             <?php } ?>
                         </div>
