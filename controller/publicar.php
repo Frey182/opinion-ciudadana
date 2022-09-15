@@ -11,6 +11,18 @@ if ($_POST) {
         $opcion1 = $_POST['opcion1'];
         $opcion2 = $_POST['opcion2'];
         $opcion3 = $_POST['opcion3'];
+
+        $id_tema = $temas[0]['id'];
+        $sexo = $_POST['publico'];
+        $edad = $_POST['edad'];
+        $municipio = $_POST['municipio'];
+        $barrio = $_POST['barrio'];
+        $etnia = $_POST['etnia'];
+        $discapacidad = $_POST['discapacidad'];
+        $estrato = $_POST['estrato'];
+        $nvl_edu = $_POST['nvledu'];
+        $regimen = $_POST['regimen'];
+
         date_default_timezone_set('America/Bogota');
         $fecha = date('Y/j/M');
 
@@ -22,6 +34,9 @@ if ($_POST) {
                 $sql = "INSERT INTO `tema` (`id`, `nombre`, `descripcion`, `imagen`, `fecha`, `fkusuario`) VALUES (NULL, '$nombre', '$descripcion', 'imagen', '$fecha', '$dni')";
                 // llamamos al método ejecutar de conexion
                 $objConexion->ejecutar($sql);
+                $sqlcondiciones = "INSERT INTO `condicion` (`id`, `sexo`, `edad`, `municipio`, `barrio`, `etnia`, `discapacidad`, `estrato`, `nivel_edu`, `regimen`, `id_tema`) VALUES (NULL, '$sexo', '$edad', '$municipio', '$barrio', '$etnia', '$discapacidad', '$estrato', '$nvl_edu', '$regimen ', '$id_tema')";
+                // llamamos al método ejecutar de conexion
+                $objConexion->ejecutar($sqlcondiciones);
                 ?>
                 <script>
 
