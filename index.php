@@ -80,18 +80,18 @@ if (empty($_SESSION)) {
                                                                             <option>Publico</option>
                                                                             <option>Todos</option>
                                                                             <?php foreach ($sexos as $sexo) { ?>
-                                                                            <option value="<?php echo $sexo['id'] ?>"><?php echo $sexo['nombre'] ?></option>
+                                                                            <option value="<?php echo $sexo['nombre'] ?>"><?php echo $sexo['nombre'] ?></option>
                                                                             <?php } ?>
                                                                             </select>
                                                                         </div>
                                                                         <div class="form-group mr-2 my-2 my-lg-2">
                                                                             <select class="form-control" id="exampleFormControlSelect2" name="edad">
                                                                             <!-- <i class="fa-solid fa-users"> Publico</i> -->
-                                                                            <option >Edad</option>
-                                                                            <option>Todas</option>
-                                                                            <option>...</option>
-                                                                            <option>...</option>
-                                                                            <option>...</option>
+                                                                            <option>Edad</option>
+                                                                            <option value="1000">Todas</option>
+                                                                            <option value="45">...</option>
+                                                                            <option value="45">...</option>
+                                                                            <option value="45">...</option>
                                                                             </select>
                                                                         </div>
                                                                         <div class="form-group mr-2 my-2 my-lg-2">
@@ -100,7 +100,7 @@ if (empty($_SESSION)) {
                                                                             <option >Municipio</option>
                                                                             <option>Todos</option>
                                                                             <?php foreach ($municipios as $municipio) { ?>
-                                                                            <option value="<?php echo $municipio['id'] ?>"><?php echo $municipio['nombre'] ?></option>
+                                                                            <option value="<?php echo $municipio['nombre'] ?>"><?php echo $municipio['nombre'] ?></option>
                                                                             <?php } ?>
                                                                             </select>
                                                                         </div>
@@ -110,7 +110,7 @@ if (empty($_SESSION)) {
                                                                             <option >Barrio/Vereda</option>
                                                                             <option>Todos</option>
                                                                             <?php foreach ($barrios as $barrio) { ?>
-                                                                            <option value="<?php echo $barrio['id'] ?>"><?php echo $barrio['nombre'] ?></option>
+                                                                            <option value="<?php echo $barrio['nombre'] ?>"><?php echo $barrio['nombre'] ?></option>
                                                                             <?php } ?>
                                                                             </select>
                                                                         </div>
@@ -120,7 +120,7 @@ if (empty($_SESSION)) {
                                                                             <option >Etnia</option>
                                                                             <option>Todas</option>
                                                                             <?php foreach ($etnias as $etnia) { ?>
-                                                                            <option value="<?php echo $etnia['id'] ?>"><?php echo $etnia['nombre'] ?></option>
+                                                                            <option value="<?php echo $etnia['nombre'] ?>"><?php echo $etnia['nombre'] ?></option>
                                                                             <?php } ?>
                                                                             </select>
                                                                         </div>
@@ -130,7 +130,7 @@ if (empty($_SESSION)) {
                                                                             <option >Discapacidad</option>
                                                                             <option>Todas</option>
                                                                             <?php foreach ($discapacidades as $discapacidad) { ?>
-                                                                            <option value="<?php echo $discapacidad['id'] ?>"><?php echo $discapacidad['nombre'] ?></option>
+                                                                            <option value="<?php echo $discapacidad['nombre'] ?>"><?php echo $discapacidad['nombre'] ?></option>
                                                                             <?php } ?>
                                                                             </select>
                                                                         </div>
@@ -153,7 +153,7 @@ if (empty($_SESSION)) {
                                                                             <option >Nivel educativo</option>
                                                                             <option>Todas</option>
                                                                             <?php foreach ($niveles_educativos as $nivel_educativo) { ?>
-                                                                            <option value="<?php echo $nivel_educativo['id'] ?>"><?php echo $nivel_educativo['nombre'] ?></option>
+                                                                            <option value="<?php echo $nivel_educativo['nombre'] ?>"><?php echo $nivel_educativo['nombre'] ?></option>
                                                                             <?php } ?>
                                                                             </select>
                                                                         </div>
@@ -162,15 +162,15 @@ if (empty($_SESSION)) {
                                                                             <!-- <i class="fa-solid fa-users"> Publico</i> -->
                                                                             <option >Regimen</option>
                                                                             <option>Todas</option>
-                                                                            <option value="1">Contributivo</option>
-                                                                            <option value="1">Subcidiado</option>
+                                                                            <option value="Contributivo">Contributivo</option>
+                                                                            <option value="Subcidiado">Subcidiado</option>
                                                                             </select>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                                <button type="submit" class="btn btn-warning" name="Para">Aceptar</button>
+                                                                <button type="button" class="btn btn-warning" data-dismiss="modal">Aceptar</button>
                                                             </div>
                                                         </div>
                                                   <!--  </form> -->
