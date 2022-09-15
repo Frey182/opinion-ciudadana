@@ -50,21 +50,3 @@ FROM tema INNER JOIN usuario ON tema.fkusuario = usuario.dni INNER JOIN comentar
 */
 
 ?>
-
-<?php
-
-if ($_POST){
-
-if (isset($_POST['Para'])){
-$publico=$_POST['publico'];
-$edad=$_POST['edad'];
-$municipio=$_POST['municipio'];
-$barrio=$_POST['barrio'];
-$etnia=$_POST['etnia'];
-$discapacidad=$_POST['discapacidad'];
-$estrato=$_POST['estrato'];
-$nvledu=$_POST['nvledu'];
-$regimen=$_POST['regimen'];
-}
-}
-?>
