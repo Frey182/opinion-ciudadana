@@ -89,10 +89,17 @@ if (empty($_SESSION)) {
                                                                             <!-- <i class="fa-solid fa-users"> Publico</i> -->
                                                                             <option>Edad</option>
                                                                             <option value="1000">Todas</option>
-                                                                            <option value="45">...</option>
-                                                                            <option value="45">...</option>
-                                                                            <option value="45">...</option>
+                                                                            <?php 
+
+                                                                            $edades = 0;
+                                                                            $maxEdad = 100;
+
+                                                                            while ($edades < $maxEdad) {
+                                                                            ?>
+                                                                                <option value="<?php echo $edades++ ?>"><?php echo $edades++ ?></option>
+                                                                            <?php } ?>
                                                                             </select>
+
                                                                         </div>
                                                                         <div class="form-group mr-2 my-2 my-lg-2">
                                                                             <select class="form-control" id="exampleFormControlSelect2" name="municipio">

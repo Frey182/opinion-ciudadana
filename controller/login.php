@@ -39,11 +39,16 @@ if ($_POST) {
                 $fkbarrio = $_POST['fkbarrio'];
                 $fkmunicipio = $_POST['fkmunicipio'];
 
+                // calculamos la edad con la fecha ingresada y la fecha actual
+                $cumpleanos = new DateTime("$nacimiento");
+                $hoy = new DateTime();
+                $annos = $hoy->diff($cumpleanos);
+
                 // confirmamos contraseña
                 if ($contrasenia == $confirmContrasenia) {
 
                     // hacemos la insercción en la tabla
-                    $sql = "INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `telefono`, `correo`, `contrasenia`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `fkdiscapacidad`, `estrato`, `regimen`,`fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES ('$dni', '$p_nombre ', '$s_nombre', '$apellido_m', '$apellido_p', '$nacimiento', '$telefono', '$correo', '$contrasenia', '$direccion', '$internet ', '$acceso_dispositivo', '$dispositivo', '$discapacidad', '$estrato', '$regimen', '$fktipo_doc', '1', '$fketnia', '$fksexo', '$fknvledu', '$fkbarrio', '$fkmunicipio')";
+                    $sql = "INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `edad`, `telefono`, `correo`, `contrasenia`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `fkdiscapacidad`, `estrato`, `regimen`,`fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES ('$dni', '$p_nombre ', '$s_nombre', '$apellido_m', '$apellido_p', '$nacimiento', '$annos->y', '$telefono', '$correo', '$contrasenia', '$direccion', '$internet ', '$acceso_dispositivo', '$dispositivo', '$discapacidad', '$estrato', '$regimen', '$fktipo_doc', '1', '$fketnia', '$fksexo', '$fknvledu', '$fkbarrio', '$fkmunicipio')";
                     // llamamos al método ejecutar de conexion
                     $objConexion->ejecutar($sql);
 
@@ -134,7 +139,7 @@ if ($_POST) {
                             })
 
                         setTimeout(function(){
-                            location.href="../index.php"
+                            location.href="login.php"
                         } , 1000);  
 
                     </script>
