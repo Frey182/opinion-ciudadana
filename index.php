@@ -13,7 +13,6 @@ if (empty($_SESSION)) {
 <?php include "model/seleccion.php"?>
 <?php include "controller/publicar.php"?>
 <?php include "controller/comentar.php"?>
-<?php print_r($temas)?>
         <div class="contepublicacion">
             <div class="container h-100">
 
@@ -230,7 +229,7 @@ if (empty($_SESSION)) {
                                             <div class="media border p-3 bg-light comentario" id="<?php echo $comentario['id_tema']; ?>">
                                                 <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
                                                 <div class="media-body">
-                                                    <h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+                                                    <h4><?php echo $comentario['p_nombre']." ".$comentario['apellido_p']?><small><i> Publicado el <?php echo $tema['fecha'] ?></i></small></h4>
                                                     <p><?php echo $comentario['descripcion']; ?></p>
                                                     <div class="media p-3">
                                                     <img src="view/img/logogobierno.png" alt="Jane Doe" class="mr-3 mt-1 rounded-circle" style="width:45px;">
@@ -242,13 +241,13 @@ if (empty($_SESSION)) {
                                                 </div>
                                             </div>   
                                         </div>
-                                <?php } ?>  
-                            <?php } ?>
+                                    <?php } ?>  
+                                <?php } ?>
 
                                 <div class="media bg-white p-2 rounded-bottom">
                                     <form action="index.php" method="post" class="w-100">
                                         <div class="input-group mb-1 texto">
-                                            <input type="text" name="tema" value="<?php echo $tema['id_tema']; ?>">
+                                            <input type="hidden" name="tema" value="<?php echo $tema['id_tema']; ?>">
                                             <textarea name="descripcion" class="form-control texto bg-light" row="1" col="50" aria-label="With textarea"></textarea>
                                             <div class="input-group-append">
                                                 <button name="comentar" value="comentar" class="btn btn-outline-warning font-weight-bold" type="submit" id="button-addon2">Comentar</button>
