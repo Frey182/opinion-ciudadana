@@ -96,7 +96,7 @@ if (empty($_SESSION)) {
 
                                                                             while ($edades < $maxEdad) {
                                                                             ?>
-                                                                                <option value="<?php echo $edades++ ?>"><?php echo $edades++ ?></option>
+                                                                                <option><?php echo $edades++ ?></option>
                                                                             <?php } ?>
                                                                             </select>
 
@@ -257,7 +257,7 @@ if (empty($_SESSION)) {
                                 </div>
                             <?php } else if ($tema['tipo_tema'] == "encuesta") {?>
                                 <?php foreach ($opcion_encuestas as $opcion_encuesta) { ?>
-                                    <?php if ($opcion_encuesta['tema_id'] == $tema['id']) { ?>
+                                    <?php if ($opcion_encuesta['tema_id'] == $tema['id_tema']) { ?>
                                         <div class="card-footer text-muted">
                                             <div class="media border p-3 bg-light">
                                                 <form action="">
