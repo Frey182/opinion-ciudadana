@@ -33,19 +33,11 @@ $condiciones = "SELECT * FROM condicion;";
 $condiciones = $objConexion->consultar($condiciones);
 
 if (isset($_SESSION['edad'])) {
-<<<<<<< HEAD
 
     // seleccionamos los temas y estos solo aparecen si el usuario cumple con las condiciones
     $temas = "SELECT * FROM tema INNER JOIN usuario ON tema.fkusuario = usuario.dni INNER JOIN condicion ON tema.id = condicion.id_tema WHERE condicion.edad =".$_SESSION['edad'];
     $temas = $objConexion->consultar($temas);
 
-=======
-    $temas = "SELECT * FROM tema 
-    INNER JOIN usuario ON tema.fkusuario = usuario.dni 
-    INNER JOIN condicion ON tema.id = condicion.id_tema
-    WHERE condicion.edad =".$_SESSION['edad'];
-    $temas = $objConexion->consultar($temas);
->>>>>>> 3d2a2526c9b962734e9a79f6d0df1b8339081649
 }
 
 /* 
