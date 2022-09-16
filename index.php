@@ -229,7 +229,7 @@ if (empty($_SESSION)) {
                                             <div class="media border p-3 bg-light comentario" id="<?php echo $comentario['id_tema']; ?>">
                                                 <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
                                                 <div class="media-body">
-                                                    <h4><?php echo $tema['p_nombre']." ".$tema['apellido_p']?><small><i> Publicado el <?php echo $tema['fecha'] ?></i></small></h4>
+                                                    <h4><?php echo $comentario['p_nombre']." ".$comentario['apellido_p']?><small><i> Publicado el <?php echo $tema['fecha'] ?></i></small></h4>
                                                     <p><?php echo $comentario['descripcion']; ?></p>
                                                     <div class="media p-3">
                                                     <img src="view/img/logogobierno.png" alt="Jane Doe" class="mr-3 mt-1 rounded-circle" style="width:45px;">
