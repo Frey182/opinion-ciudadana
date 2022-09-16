@@ -5,21 +5,26 @@ if ($_POST) {
     if (isset($_POST['comentar'])) {
 
         $btn = $_POST['comentar'];
-        $descripcion = $_POST['descripcion'];
-        $tema = $_POST['tema'];
-        $dni = $_SESSION['dni'];
+        
+        if ($btn == "comentar") {
 
-        $objConexion = new Conexion();
-        $sql = "INSERT INTO `comentario` (`id`, `descripcion`, `id_usu`, `id_tema`) VALUES (NULL, '$descripcion', '$dni', '$tema')";
-        $objConexion->ejecutar($sql);
+            $descripcion = $_POST['descripcion'];
+            $tema = $_POST['tema'];
+            $dni = $_SESSION['dni'];
 
-        ?>
-        <script>
+            $objConexion = new Conexion();
+            $sql = "INSERT INTO `comentario` (`id`, `descripcion`, `id_usu`, `id_tema`) VALUES (NULL, '$descripcion', '$dni', '$tema')";
+            $objConexion->ejecutar($sql);
 
-            location.href="index.php"
+            ?>
+            <script>
 
-        </script>
-        <?php
+                location.href="index.php"
+
+            </script>
+            <?php
+
+        }
 
     }
 
