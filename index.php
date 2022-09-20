@@ -91,10 +91,10 @@ if (empty($_SESSION)) {
                                                                             <option value="1000">Todas</option>
                                                                             <?php 
 
-                                                                            $edades = 0;
+                                                                            $edades = 1;
                                                                             $maxEdad = 100;
 
-                                                                            while ($edades < $maxEdad) {
+                                                                            while ($edades <= $maxEdad) {
                                                                             ?>
                                                                                 <option><?php echo $edades++ ?></option>
                                                                             <?php } ?>

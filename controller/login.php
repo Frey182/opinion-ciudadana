@@ -48,9 +48,11 @@ if ($_POST) {
                 if ($contrasenia == $confirmContrasenia) {
 
                     // hacemos la insercción en la tabla
-                    $sql = "INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `edad`, `telefono`, `correo`, `contrasenia`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `fkdiscapacidad`, `estrato`, `regimen`,`fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES ('$dni', '$p_nombre ', '$s_nombre', '$apellido_m', '$apellido_p', '$nacimiento', '$annos->y', '$telefono', '$correo', '$contrasenia', '$direccion', '$internet ', '$acceso_dispositivo', '$dispositivo', '$discapacidad', '$estrato', '$regimen', '$fktipo_doc', '1', '$fketnia', '$fksexo', '$fknvledu', '$fkbarrio', '$fkmunicipio')";
+                    $sql = "INSERT INTO `usuario` (`dni`, `p_nombre`, `s_nombre`, `apellido_m`, `apellido_p`, `nacimiento`, `edad`, `telefono`, `correo`, `contrasenia`, `direccion`, `internet`, `acceso_dispositivo`, `dispositivo`, `estrato`, `regimen`,`fktipo_doc`, `fktipo_usu`, `fketnia`, `fksexo`, `fknvledu`, `fkbarrio`, `fkmunicipio`) VALUES ('$dni', '$p_nombre ', '$s_nombre', '$apellido_m', '$apellido_p', '$nacimiento', '$annos->y', '$telefono', '$correo', '$contrasenia', '$direccion', '$internet ', '$acceso_dispositivo', '$dispositivo', '$estrato', '$regimen', '$fktipo_doc', '1', '$fketnia', '$fksexo', '$fknvledu', '$fkbarrio', '$fkmunicipio')";
+                    $sql2 = "INSERT INTO `usuario_discapacidad` (`id`, `id_discapacidad`, `id_usuario`) VALUES (NULL, '$discapacidad', '$dni')";
                     // llamamos al método ejecutar de conexion
                     $objConexion->ejecutar($sql);
+                    $objConexion->ejecutar($sql2);
 
 
                     // iniciamos el session
@@ -128,6 +130,9 @@ if ($_POST) {
                 FROM usuario, tipo_doc, etnia, municipio, nivel_educativo, sexo, discapacidad, barrio WHERE usuario.dni = $dni";
 
                 $comparacion = $objConexion->consultar($comparacion);
+
+                $temas = "SELECT * FROM tema INNER JOIN usuario ON tema.fkusuario = usuario.dni ORDER BY id DESC;";
+                $temas = $objConexion->consultar($temas);
 
                 // si la contraseña y tipo de documento SÍ pertenecen al usuario consultado
                 if (($contrasenia == $resultado[0]['contrasenia']) && ($fktipo_doc == $resultado[0]['fktipo_doc'])) {
