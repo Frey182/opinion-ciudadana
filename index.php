@@ -261,29 +261,31 @@ if (empty($_SESSION)) {
                                         <div class="card-footer text-muted">
                                             <div class="media border p-3 bg-light">
                                                 <form action="">
+                                                    <input type="hidden" name="idtema" value="<?php echo $tema['id'] ?>">
+                                                    <input type="hidden" name="usuario" value="<?php echo $tema['fkusuario'] ?>">
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" name="opcion" value="<?php echo $encuesta['opcion1'] ?>" checked>
                                                         <label class="form-check-label" for="exampleRadios1">
                                                             <?php echo $opcion_encuesta['opcion1'];?>
                                                         </label>
                                                     </div>
                                                     <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" name="opcion" value="<?php echo $encuesta['opcion2'] ?>">
                                                         <label class="form-check-label" for="exampleRadios2">
                                                             <?php echo $opcion_encuesta['opcion2'];?>
                                                         </label>
                                                     </div>
                                                     <div class="form-check ">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" name="opcion" value="<?php echo $encuesta['opcion3'] ?>">
                                                         <label class="form-check-label" for="exampleRadios3">
                                                             <?php echo $opcion_encuesta['opcion3'];?>
                                                         </label>
                                                     </div>
-                                                </form>
-                                            </div>
-                                            <div class="conteboton d-flex justify-content-center mt-3">
-                                                <button type="submit" class="btn btn-warning">Responder</button>
-                                            </div>
+                                                </div>
+                                                <div class="conteboton d-flex justify-content-center mt-3">
+                                                    <button type="submit" name="enviar" value="resencuesta" class="btn btn-warning">Responder</button>
+                                                </div>
+                                            </form>
                                         </div>
                                     <?php } ?>    
                                 <?php } ?>
