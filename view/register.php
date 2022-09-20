@@ -36,9 +36,9 @@
     <div class="row h-100">
         <div class="col col-md-2"></div>
            <div class="conteform col col-md-8">
-           <br><br>
+           <br><br><br>
                 <div class="card shadow rounded">
-                    <div class="card-header bg-warning" ><h1 style="color:white;">REGISTRO</h1></div>
+                    <div class="card-header" style="background-color:#0166d0;" ><h1 style="color:white;">REGISTRO</h1></div>
                     <div class="card-body">     
                             <form action="register.php" method="post">
                                <!-- Slider 1 del registro -->
@@ -89,7 +89,7 @@
                                             </div> 
                                             <div class="paginacion d-flex justify-content-center" style="text-aling:center; font-weight:bold;">
                                                 <p class="mr-2">1 de 3</p>
-                                                <i class="fa-solid fa-circle-chevron-right" style="font-size:30px; color:#ffc107;" id="btnSlider1"></i>
+                                                <i class="fa-solid fa-circle-chevron-right" style="font-size:30px; color:#0166d0;" id="btnSlider1"></i>
                                             </div>
                                         </div>
                                             <div class="col col-md-4">
@@ -160,9 +160,9 @@
                                                 </select>
                                             </div>
                                             <div class="paginacion d-flex justify-content-center" style="text-aling:center; font-weight:bold;">
-                                                <i class="fa-solid fa-circle-chevron-left" style="font-size:30px; color:#ffc107;" id="btnSliderBack1"></i>
+                                                <i class="fa-solid fa-circle-chevron-left" style="font-size:30px; color:#0166d0;" id="btnSliderBack1"></i>
                                                 <p class="mr-2 ml-2">2 de 3</p>
-                                                <i class="fa-solid fa-circle-chevron-right" style="font-size:30px; color:#ffc107;" id="btnSlider2"></i>
+                                                <i class="fa-solid fa-circle-chevron-right" style="font-size:30px; color:#0166d0;" id="btnSlider2"></i>
                                             </div>
                                          </div>
                                             <div class="col col-md-4">
@@ -256,7 +256,7 @@
                                                 </div>
                                            </div>
                                            <div class="paginacion d-flex justify-content-center" style="text-aling:center; font-weight:bold;">
-                                                <i class="fa-solid fa-circle-chevron-left" style="font-size:30px; color:#ffc107;" id="btnSliderBack2"></i>
+                                                <i class="fa-solid fa-circle-chevron-left" style="font-size:30px; color:#0166d0;" id="btnSliderBack2"></i>
                                                 <p class="ml-2">3 de 3</p>
                                             </div>
                                         </div>
@@ -282,7 +282,7 @@
                                                     <img src="img/logogobierno.png" class="img-fluid" alt="">
                                                 </div>
                                                 <div class="contebuton">
-                                                    <button type="submit" class="btn btn-outline-warning font-weight-bold mt-4" name="enviar" value="registrarse">REGISTRARSE</button>
+                                                    <button type="submit" class="btn btn-outline-primary font-weight-bold mt-4" name="enviar" value="registrarse">REGISTRARSE</button>
                                                 </div>
                                                     <a href="login.php">¿Ya tienes cuenta?</a>
                                             </div>  
