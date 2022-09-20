@@ -29,8 +29,8 @@
 </head>
 <body style="background-color: #EEF2E6">
 <?php include "controller/login.php"?>
-    <nav class="navbar navbar-expand-lg navbar-light bg-warning ">
-                <a class="navbar-brand mr-5" href="#">Opinion Ciudadana</a>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:  #449aff;">
+                <a class="navbar-brand mr-5" href="#" style="color:white;">Opinion Ciudadana</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -45,12 +45,12 @@
                 </form>
                     <div class="conteoptions d-flex justify-content-around ml-4">
                         <div class="dropdown ml-2">
-                            <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa-solid fa-user"></i>
+                            <button class="btn dropdown-toggle " type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa-solid fa-user" style="color:white;"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                                 <div class="contedatos d-flex">
-                                    <div class="fondo bg-warning rounded-circle d-flex justify-content-center align-items-center mr-2 ml-2" style="width:50px; height:50px;">
+                                    <div class="fondo rounded-circle d-flex justify-content-center align-items-center mr-2 ml-2" style="width:50px; height:50px; background-color:  #449aff;">
                                         <h1 class="m-auto text-dark">
                                             <?php 
                                                 $nombre=$_SESSION['nombre'];
@@ -75,19 +75,21 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="dropdown ml-2">
-                            <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa-solid fa-user"></i>
-                            </button>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
-                                <button class="dropdown-item" type="button">Action</button>
-                                <button class="dropdown-item" type="button">Another action</button>
-                                <button class="dropdown-item" type="button">Something else here</button>
+                        <?php if($_SESSION['tipo_usu']=="administrador"){ ?>
+                            <div class="dropdown ml-2">
+                                <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fa-solid fa-user" style="color:white;"></i>
+                                </button>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+                                    <button class="dropdown-item" type="button"><a href="resultados.php">Resultados</a></button>
+                                    <button class="dropdown-item" type="button">Another action</button>
+                                    <button class="dropdown-item" type="button">Something else here</button>
+                                </div>
                             </div>
-                        </div>
+                        <?php } ?>
                         <div class="dropdown ml-2">
                             <button class="btn dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fa-solid fa-user" style="color:white;"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
                                 <button class="dropdown-item" type="button">Action</button>

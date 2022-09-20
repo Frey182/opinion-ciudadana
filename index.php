@@ -177,7 +177,7 @@ if (empty($_SESSION)) {
                                                                 </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                                <button type="button" class="btn btn-warning" data-dismiss="modal">Aceptar</button>
+                                                                <button type="button" class="btn btn-primary" data-dismiss="modal">Aceptar</button>
                                                             </div>
                                                         </div>
                                                   <!--  </form> -->
@@ -191,7 +191,7 @@ if (empty($_SESSION)) {
                                                 </select>
                                             </div>
                                         <button class="btn btn-light border-secondary rounded-circle mr-2" style="height: 50px; width: 50px;"><i class="fa-regular fa-image"></i></button>
-                                        <button name="enviar" value="publicar" type="submit" class="btn btn-success rounded-circle" style="height: 50px; width: 50px;"><i class="fa-solid fa-arrow-up-from-bracket" ></i></button>
+                                        <button name="enviar" value="publicar" type="submit" class="btn btn-primary rounded-circle" style="height: 50px; width: 50px;"><i class="fa-solid fa-arrow-up-from-bracket" ></i></button>
                                        
                                     </div>
                                 </form>
@@ -206,7 +206,7 @@ if (empty($_SESSION)) {
                 <?php foreach ($temas as $tema) { ?>
                     <div class="card mb-3 publicacion" id="<?php echo $tema['id']; ?>">
                         <div>
-                            <div class="card-header d-flex border p-3 rounded shadow-sm bg-warning">
+                            <div class="card-header d-flex border p-3 rounded shadow-sm" style="background-color:  #449aff;">
                                 <div class="conteimguser">
                                     <img src="view/img/logogobierno.png" alt="John Doe" class="mr-3 mt-1 rounded-circle" style="width:60px;">
                                 </div>
@@ -250,7 +250,7 @@ if (empty($_SESSION)) {
                                             <input type="hidden" name="tema" value="<?php echo $tema['id_tema']; ?>">
                                             <textarea name="descripcion" class="form-control texto bg-light" row="1" col="50" aria-label="With textarea"></textarea>
                                             <div class="input-group-append">
-                                                <button name="comentar" value="comentar" class="btn btn-outline-warning font-weight-bold" type="submit" id="button-addon2">Comentar</button>
+                                                <button name="comentar" value="comentar" class="btn btn-outline-primary font-weight-bold" type="submit" id="button-addon2">Comentar</button>
                                             </div>
                                         </div>
                                     </form>
@@ -281,11 +281,19 @@ if (empty($_SESSION)) {
                                                             <?php echo $opcion_encuesta['opcion3'];?>
                                                         </label>
                                                     </div>
+<<<<<<< HEAD
                                                 </div>
                                                 <div class="conteboton d-flex justify-content-center mt-3">
                                                     <button type="submit" name="enviar" value="resencuesta" class="btn btn-warning">Responder</button>
                                                 </div>
                                             </form>
+=======
+                                                </form>
+                                            </div>
+                                            <div class="conteboton d-flex justify-content-center mt-3">
+                                                <button type="submit" class="btn btn-primary">Responder</button>
+                                            </div>
+>>>>>>> ffcd1034930a3ad09105e40d8ca77fa506ba4dc8
                                         </div>
                                     <?php } ?>    
                                 <?php } ?>
