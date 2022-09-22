@@ -13,6 +13,7 @@ if (empty($_SESSION)) {
 <?php include "model/seleccion.php"?>
 <?php include "controller/publicar.php"?>
 <?php include "controller/comentar.php"?>
+<?php include "controller/resencuesta.php"?>
         <div class="contepublicacion">
             <div class="container h-100">
 
@@ -204,6 +205,10 @@ if (empty($_SESSION)) {
 
                 <!-- PARA PUBLICACIONES -->
                 <?php foreach ($temas as $tema) { ?>
+                    <?php 
+                        $encuestas = "SELECT * FROM encuesta_usuario WHERE id_encuesta = ".$tema['id_tema'];
+                        $encuestas = $objConexion->consultar($encuestas);
+                    ?>
                     <div class="card mb-3 publicacion" id="<?php echo $tema['id']; ?>">
                         <div>
                             <div class="card-header d-flex border p-3 rounded shadow-sm" style="background-color:  #449aff;">
@@ -260,33 +265,34 @@ if (empty($_SESSION)) {
                                     <?php if ($opcion_encuesta['tema_id'] == $tema['id_tema']) { ?>
                                         <div class="card-footer text-muted">
                                             <div class="media border p-3 bg-light">
-                                                <form action="">
-                                                    <input type="hidden" name="idtema" value="<?php echo $tema['id'] ?>">
-                                                    <input type="hidden" name="usuario" value="<?php echo $tema['fkusuario'] ?>">
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" name="opcion" value="<?php echo $encuesta['opcion1'] ?>" checked>
-                                                        <label class="form-check-label" for="exampleRadios1">
-                                                            <?php echo $opcion_encuesta['opcion1'];?>
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" name="opcion" value="<?php echo $encuesta['opcion2'] ?>">
-                                                        <label class="form-check-label" for="exampleRadios2">
-                                                            <?php echo $opcion_encuesta['opcion2'];?>
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check ">
-                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" name="opcion" value="<?php echo $encuesta['opcion3'] ?>">
-                                                        <label class="form-check-label" for="exampleRadios3">
-                                                            <?php echo $opcion_encuesta['opcion3'];?>
-                                                        </label>
-                                                    </div>
+                                                <form action="index.php" method="post">
+                                                    <?php if ((isset($encuestas[0])) && (in_array($_SESSION['dni'], $encuestas[0]))) { echo "Usted ya ha participado en esta encuesta"; } else { ?>
+                                                        <input type="hidden" name="idtema" value="<?php echo $tema['id_tema'] ?>">
+                                                        <input type="hidden" name="usuario" value="<?php echo $tema['fkusuario'] ?>">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" id="exampleRadios1" name="opcion" checked value="<?php echo $opcion_encuesta['opcion1'];?>">
+                                                            <label class="form-check-label" for="exampleRadios1">
+                                                                <?php echo $opcion_encuesta['opcion1'];?>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" id="exampleRadios2" name="opcion" value="<?php echo $opcion_encuesta['opcion2'];?>">
+                                                            <label class="form-check-label" for="exampleRadios2">
+                                                                <?php echo $opcion_encuesta['opcion2'];?>
+                                                            </label>
+                                                        </div>
+                                                        <div class="form-check ">
+                                                            <input class="form-check-input" type="radio" id="exampleRadios3" name="opcion" value="<?php echo $opcion_encuesta['opcion3'];?>">
+                                                            <label class="form-check-label" for="exampleRadios3">
+                                                                <?php echo $opcion_encuesta['opcion3'];?>
+                                                            </label>
+                                                        </div>
+                                                    <?php } ?>
                                                 </div>
                                                 <div class="conteboton d-flex justify-content-center mt-3">
                                                     <button type="submit" name="enviar" value="resencuesta" class="btn btn-primary">Responder</button>
                                                 </div>
                                             </form>
-
                                         </div>
                                     <?php } ?>    
                                 <?php } ?>
