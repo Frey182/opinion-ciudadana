@@ -206,7 +206,7 @@ if (empty($_SESSION)) {
                 <!-- PARA PUBLICACIONES -->
                 <?php foreach ($temas as $tema) { ?>
                     <?php 
-                        $encuestas = "SELECT * FROM encuesta_usuario WHERE id_encuesta = ".$tema['id_tema'];
+                        $encuestas = "SELECT * FROM encuesta_usuario WHERE id_encuesta = ".$tema['id_tema']." AND id_usuario = ". $_SESSION['dni'];
                         $encuestas = $objConexion->consultar($encuestas);
                     ?>
                     <div class="card mb-3 publicacion" id="<?php echo $tema['id']; ?>">
@@ -266,9 +266,14 @@ if (empty($_SESSION)) {
                                         <div class="card-footer text-muted">
                                             <div class="media border p-3 bg-light">
                                                 <form action="index.php" method="post">
-                                                    <?php if ((isset($encuestas[0])) && (in_array($_SESSION['dni'], $encuestas[0]))) { echo "Usted ya ha participado en esta encuesta"; } else { ?>
+                                                    <?php if ((isset($encuestas[0])) && (in_array($_SESSION['dni'], $encuestas[0]))) {
+
+                                                            echo "Usted ya ha participado en esta encuesta"; } 
+
+                                                        else { 
+                                                    ?>
                                                         <input type="hidden" name="idtema" value="<?php echo $tema['id_tema'] ?>">
-                                                        <input type="hidden" name="usuario" value="<?php echo $tema['fkusuario'] ?>">
+                                                        <input type="hidden" name="usuario" value="<?php echo $_SESSION['dni']; ?>">
                                                         <div class="form-check">
                                                             <input class="form-check-input" type="radio" id="exampleRadios1" name="opcion" checked value="<?php echo $opcion_encuesta['opcion1'];?>">
                                                             <label class="form-check-label" for="exampleRadios1">
