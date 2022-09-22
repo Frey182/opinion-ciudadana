@@ -281,19 +281,12 @@ if (empty($_SESSION)) {
                                                             <?php echo $opcion_encuesta['opcion3'];?>
                                                         </label>
                                                     </div>
-<<<<<<< HEAD
                                                 </div>
                                                 <div class="conteboton d-flex justify-content-center mt-3">
-                                                    <button type="submit" name="enviar" value="resencuesta" class="btn btn-warning">Responder</button>
+                                                    <button type="submit" name="enviar" value="resencuesta" class="btn btn-primary">Responder</button>
                                                 </div>
                                             </form>
-=======
-                                                </form>
-                                            </div>
-                                            <div class="conteboton d-flex justify-content-center mt-3">
-                                                <button type="submit" class="btn btn-primary">Responder</button>
-                                            </div>
->>>>>>> ffcd1034930a3ad09105e40d8ca77fa506ba4dc8
+
                                         </div>
                                     <?php } ?>    
                                 <?php } ?>
