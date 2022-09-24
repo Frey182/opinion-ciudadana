@@ -32,6 +32,9 @@ $opcion_encuestas = $objConexion->consultar($opcion_encuestas);
 $condiciones = "SELECT * FROM condicion;";
 $condiciones = $objConexion->consultar($condiciones);
 
+$encuestas = "SELECT * FROM tema WHERE tipo_tema = 'encuesta'";
+$encuestas = $objConexion->consultar($encuestas);
+
 if (isset($_SESSION['edad'])) {
 
     // seleccionamos los temas y estos solo aparecen si el usuario cumple con las condiciones
