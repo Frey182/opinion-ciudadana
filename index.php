@@ -18,7 +18,7 @@ if (empty($_SESSION)) {
             <div class="container h-100">
 
                 <?php if($_SESSION['tipo_usu']=="administrador"){ ?>
-                    <div class="card mb-3 border-secondary">
+                    <div class="card mb-3 border-secondary shadow-sm">
                         <div class="card-body p-3 bg-white">
                         <form action="index.php" method="post">    
                             <div class="contenameusu">
@@ -209,7 +209,7 @@ if (empty($_SESSION)) {
                         $encuestas = "SELECT * FROM encuesta_usuario WHERE id_encuesta = ".$tema['id_tema']." AND id_usuario = ". $_SESSION['dni'];
                         $encuestas = $objConexion->consultar($encuestas);
                     ?>
-                    <div class="card mb-3 publicacion" id="<?php echo $tema['id']; ?>">
+                    <div class="card mb-3 publicacion shadow-sm" id="<?php echo $tema['id']; ?>">
                         <div>
                             <div class="card-header d-flex border p-3 rounded shadow-sm" style="background-color:  #449aff;">
                                 <div class="conteimguser">
