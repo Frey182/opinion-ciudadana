@@ -61,6 +61,7 @@ if ($_POST) {
                     // almacenamos los datos del usuario en la variable
                     $_SESSION = array(
                         "nombre"=>$p_nombre. " ".  $s_nombre. " ". $apellido_p . " ". $apellido_m,  
+                        "dni"=>$dni, 
                         "correo"=>$correo, 
                         "tipo_doc"=>$fktipo_doc,
                         "tipo_usu"=>"usuario",
